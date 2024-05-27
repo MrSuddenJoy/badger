@@ -16,6 +16,8 @@ readonly class Activity
     public TwigLiteral $chartLibrarySourceHtml;
 
     private Mention $mention;
+    public array $categories;
+    public array $deleteReasons;
 
     /**
      * @param Category[] $categories
@@ -33,6 +35,43 @@ readonly class Activity
         $this->categoriesChart = new TwigLiteral($this->categoriesChart($this->categoriesSliced($this->categoriesSorted($categories), 10)));
         $this->deleteReasonsChart = new TwigLiteral($this->deleteReasonsChart($this->reasonsSorted($deleteReasons)));
         $this->chartLibrarySourceHtml = new TwigLiteral(Chart::librarySourceHtml());
+
+        array                $deleteReasons,
+        public PostStatistic $postsStatistic,
+    )
+    {
+        $this->mention = new Mention($user);
+
+        \uSort($categories, fn(Category $a, Category $b): int => $b->posts - $a->posts);
+        $this->categories = $categories;
+        $this->deleteReasons = $this->sorted($deleteReasons);
+
+        $forumNames = $this->extracted($this->categories, 'forumName');
+        $categoriesChart = new Chart(
+            $forumNames,
+            $this->extracted($this->categories, 'posts'),
+            \array_map($this->categoryColor(...), $forumNames),
+            'categories-chart',
+            baseline:40,
+            horizontal:true,
+        );
+
+        $deleteReasonsChart = new Chart(
+            \array_map(
+                fn(?string $reason) => $reason ?? '(nie podano powodu)',
+                $this->extracted($this->deleteReasons, 'reason'),
+            ),
+            $this->extracted($this->deleteReasons, 'posts'),
+            \array_map($this->deleteReasonColor(...), $this->deleteReasons),
+            'reasons-chart',
+            baseline:10,
+            horizontal:true,
+        );
+
+        $this->categoriesChart = new TwigLiteral($categoriesChart);
+        $this->deleteReasonsChart = new TwigLiteral($deleteReasonsChart);
+
+        $this->chartLibrarySourceHtml = new TwigLiteral($deleteReasonsChart->librarySourceHtml());
     }
 
     public function hasDeleteReasons(): bool
