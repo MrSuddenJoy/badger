@@ -6,7 +6,7 @@
     <div class="card">
       <div class="card-header">
         <i class="fas fa-balance-scale"></i>
-        Sprawa #{{ post.id }}
+        Zgłoszony post #{{ post.id }}
       </div>
       <div class="list-group list-group-flush">
         <div class="list-group-item">
@@ -38,7 +38,11 @@
     <div class="card-body">
       <div class="row">
         <div class="col-2">
-          <img class="post-avatar img-thumbnail" src="" alt="{{ post.authorName }}"/>
+          <img
+              class="post-avatar img-thumbnail"
+              src="{{ post.authorAvatar }}"
+              alt="{{ post.authorName }}"
+          />
         </div>
         <div class="col-10">{{ post.html }}</div>
       </div>

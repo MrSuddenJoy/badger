@@ -4,6 +4,8 @@ namespace Coyote\Http\Controllers\Adm;
 use Carbon\Carbon;
 use Coyote\Domain\ReportedPost;
 use Coyote\Post;
+use Coyote\Services\Media;
+use Coyote\Services\Media\MediaInterface;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
@@ -11,7 +13,7 @@ class FlagController extends BaseController
 {
     public function index(): View
     {
-        $this->breadcrumb->push('Sprawy', route('adm.flag'));
+        $this->breadcrumb->push('Zgłoszone posty', route('adm.flag'));
         return $this->view('adm.flag.home')->with([
             'posts' => $this->reportedPosts(),
         ]);
@@ -19,13 +21,13 @@ class FlagController extends BaseController
 
     public function show(Post $post): View
     {
-        $this->breadcrumb->push('Sprawy', route('adm.flag'));
+        $this->breadcrumb->push('Zgłoszone posty', route('adm.flag'));
         $this->breadcrumb->push('#' . $post->id, route('adm.flag.show', [$post->id]));
 
         return $this->view('adm.flag.show')->with([
             'post'    => $this->reportedPostById($post->id),
-            'backUrl' => route('adm.flag'),
             'reports' => $this->reportHistory($post->id),
+            'backUrl' => route('adm.flag'),
         ]);
     }
 
@@ -76,6 +78,7 @@ class FlagController extends BaseController
                   MIN(posts.forum_id)       AS forum_id,
                   MIN(forums.slug)          AS forum_slug,
                   MIN(authors.id)           AS author_id,
+                  MIN(authors.photo)        AS author_photo,
                   MIN(authors.name)         AS author_name,
                   JSON_AGG(reporters.id)    AS reporter_ids,
                   JSON_AGG(reporters.name)  AS reporter_names,
@@ -101,6 +104,7 @@ class FlagController extends BaseController
                 $record->post,
                 $record->author_id,
                 $record->author_name,
+                $this->avatar($record->author_photo),
                 \array_unique(\json_decode($record->reporter_ids)),
                 \array_unique(\json_decode($record->reporter_names)),
                 \array_values(\array_unique(\json_decode($record->report_types))),
@@ -111,5 +115,21 @@ class FlagController extends BaseController
             ),
             $query,
         );
+    }
+
+    private function avatar(?string $filename): string
+    {
+        if ($filename) {
+            $image = $this->image($filename);
+            if ($image->getFilename()) {
+                return $image->url();
+            }
+        }
+        return cdn('/img/avatar.png');
+    }
+
+    private function image(string $filename): MediaInterface
+    {
+        return app(Media\Factory::class)->make('photo', ['file_name' => $filename]);
     }
 }

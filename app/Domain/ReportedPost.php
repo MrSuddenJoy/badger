@@ -16,6 +16,7 @@ class ReportedPost
         public string $contentMarkdown,
         public int    $authorId,
         public string $authorName,
+        public string $authorAvatar,
         public array  $reporterIds,
         public array  $reporterNames,
         public array  $reportTypes,
