@@ -3,7 +3,6 @@
     <div class="d-flex justify-content-between">
       <div>
         <p class="mb-0 text-right">
-          <i class="fas fa-balance-scale"></i>
           <a href="{{ post.url }}">Sprawa #{{ post.id }}</a>
           <span class="badge badge-primary ml-1">
             Nowa
@@ -12,44 +11,43 @@
       </div>
       <div>
         <span class="text-muted" title="Ostatnia aktywność w sprawie: {{ post.updatedAt }}">
-          ostatnia aktywność:
-          <b>{{ post.updatedAgo }}</b>
           <i class="fas fa-history"></i>
+          {{ post.updatedAgo }}
         </span>
       </div>
     </div>
   </div>
   <div class="list-group list-group-flush">
     <div class="list-group-item">
-      <div>
-        <i class="fas fa-user-edit"></i>
-        {{ post.authorMention }} napisał(a) w: <a href="{{ post.forumUrl }}">{{ post.forumSlug }}</a>:
-      </div>
-      <div>
-        <div class="d-inline-block post-preview" style="margin: 0.15rem 0;">
-          {{ post.preview }}
-        </div>
-      </div>
-      <small class="text-muted" title="Post napisany: {{ post.createdAt }}">
-        {{ post.createdAgo }}
-      </small>
+      {% for type in post.reportTypes %}
+        <span class="mr-2">
+          <i class="far fa-flag"></i>
+          {{ type }}
+        </span>
+      {% endfor %}
     </div>
-  </div>
-  <div class="list-group-item">
-    <div class="d-flex justify-content-between">
-      <span>
-        <i class="fas fa-user"></i>
-        Zgłaszający:
-        {% for reporterMention in post.reporterMentions %}
-          {{ reporterMention }}
-        {% endfor %}
-      </span>
-      <span class="text-muted">
-        {% for type in post.reportTypes %}
-          <i class="fas fa-flag ml-1"></i>
-          <b>{{ type }}</b>
-        {% endfor %}
-      </span>
+    <div class="list-group-item">
+      <i class="far fa-user"></i>
+      Zgłaszający:
+      {% for reporterMention in post.reporterMentions %}
+        {{ reporterMention }}
+      {% endfor %}
+    </div>
+    <div class="list-group-item">
+      <div style="font-size:0.75em;">
+        <div>
+          <i class="fas fa-user-edit"></i>
+          {{ post.authorMention }} napisał(a) w: <a href="{{ post.forumUrl }}">{{ post.forumSlug }}</a>:
+        </div>
+        <div>
+          <div class="d-inline-block post-preview" style="margin: 0.15rem 0;">
+            {{ post.preview }}
+          </div>
+        </div>
+        <small class="text-muted" title="Post napisany: {{ post.createdAt }}">
+          {{ post.createdAgo }}
+        </small>
+      </div>
     </div>
   </div>
 </div>
