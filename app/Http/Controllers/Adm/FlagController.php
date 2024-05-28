@@ -23,14 +23,18 @@ class FlagController extends BaseController
         $this->breadcrumb->push('#' . $post->id, route('adm.flag.show', [$post->id]));
         $this->breadcrumb->push('Podgląd', '');
 
-        $arrayFilter = \array_values(\array_filter(
-            $this->reportedPosts(),
-            fn(ReportedPost $r) => $r->id === $post->id,
-        ));
         return $this->view('adm.flag.show')->with([
-            'post'    => $arrayFilter[0],
+            'post'    => $this->reportedPostById($post->id),
             'backUrl' => route('adm.flag'),
         ]);
+    }
+
+    private function reportedPostById(int $postId): ReportedPost
+    {
+        return \array_values(\array_filter(
+            $this->reportedPosts(),
+            fn(ReportedPost $r) => $r->id === $postId,
+        ))[0];
     }
 
     private function reportedPosts(): array
@@ -67,7 +71,7 @@ class FlagController extends BaseController
                 $record->post,
                 $record->author_id,
                 $record->author_name,
-                \json_decode($record->reporter_ids),
+                \array_unique(\json_decode($record->reporter_ids)),
                 \array_unique(\json_decode($record->reporter_names)),
                 \array_values(\array_unique(\json_decode($record->report_types))),
                 new Carbon($record->created_at),

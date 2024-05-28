@@ -28,11 +28,11 @@ class ReportedPost
         $this->preview = new PostPreview($this->contentMarkdown);
     }
 
-    public function url():string
+    public function url(): string
     {
         return \route('adm.flag.show', [$this->id]);
     }
-    
+
     public function updatedAgo(): string
     {
         return $this->ago($this->updatedAt);
@@ -46,6 +46,17 @@ class ReportedPost
     private function ago(Carbon $dateTime): string
     {
         return $this->firstWords($dateTime->diff(Carbon::now()), 4) . ' temu';
+    }
+
+    public function reporterMentions(): array
+    {
+        return \array_map(
+            function (int $id, string $name) {
+                $mention = new Mention($id, $name);
+                return $mention->mention();
+            },
+            $this->reporterIds, $this->reporterNames,
+        );
     }
 
     private function firstWords(CarbonInterval $interval, int $words): string

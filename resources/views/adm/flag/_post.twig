@@ -38,14 +38,17 @@
   <div class="list-group-item">
     <div class="d-flex justify-content-between">
       <span>
-        <i class="fas fa-user-times"></i>
+        <i class="fas fa-user"></i>
         Zgłaszający:
-        <b>{{ post.reporterNames|json_encode|raw }}</b>
+        {% for reporterMention in post.reporterMentions %}
+          {{ reporterMention }}
+        {% endfor %}
       </span>
       <span class="text-muted">
-        z powodu
-        <b>{{ post.reportTypes|json_encode|raw }}</b>
-        <i class="fas fa-flag"></i>
+        {% for type in post.reportTypes %}
+          <i class="fas fa-flag ml-1"></i>
+          <b>{{ type }}</b>
+        {% endfor %}
       </span>
     </div>
   </div>
