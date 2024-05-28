@@ -26,7 +26,38 @@ class FlagController extends BaseController
         return $this->view('adm.flag.show')->with([
             'post'    => $this->reportedPostById($post->id),
             'backUrl' => route('adm.flag'),
+            'reports' => $this->reportHistory($post->id),
         ]);
+    }
+
+    private function reportHistory(int $postId): array
+    {
+        $query = DB::select(<<<'query'
+            select flags.id         AS report_id,
+                   reporters.id     AS reporter_id,
+                   reporters.name   AS reporter_name,
+                   flag_types.name  AS type,
+                   flags.text       AS report_note,
+                   flags.created_at AS reported_at
+            from flags
+                     join users AS reporters on reporters.id = flags.user_id
+                     join flag_types ON flags.type_id = flag_types.id
+                     join flag_resources ON flags.id = flag_resources.flag_id
+            where flag_resources.resource_type in ('Coyote\Post')
+              AND flag_resources.resource_id = ?
+            order by flags.created_at DESC;
+            query, [$postId]);
+        return \array_map(
+            fn(\stdClass $record) => new \Coyote\Domain\Report(
+                $record->report_id,
+                $record->reporter_id,
+                $record->reporter_name,
+                $record->type,
+                $record->report_note,
+                new Carbon($record->reported_at),
+            ),
+            $query,
+        );
     }
 
     private function reportedPostById(int $postId): ReportedPost
