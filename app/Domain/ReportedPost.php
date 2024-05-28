@@ -18,6 +18,7 @@ class ReportedPost
         public string $authorName,
         public array  $reporterIds,
         public array  $reporterNames,
+        public array  $reportTypes,
         public Carbon $createdAt,
         public Carbon $updatedAt,
         public int    $forumId,

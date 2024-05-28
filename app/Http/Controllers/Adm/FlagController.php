@@ -38,15 +38,16 @@ class FlagController extends BaseController
         $query = DB::select(<<<query
             SELECT 
                   posts.id AS post_id,
-                  MIN(posts.text)          AS post,
-                  MIN(posts.forum_id)      AS forum_id,
-                  MIN(forums.slug)         AS forum_slug,
-                  MIN(authors.id)          AS author_id,
-                  MIN(authors.name)        AS author_name,
-                  JSON_AGG(reporters.id)   AS reporter_ids,
-                  JSON_AGG(reporters.name) AS reporter_names,
-                  MIN(flags.created_at)    AS created_at,
-                  MAX(flags.created_at)    AS updated_at
+                  MIN(posts.text)           AS post,
+                  MIN(posts.forum_id)       AS forum_id,
+                  MIN(forums.slug)          AS forum_slug,
+                  MIN(authors.id)           AS author_id,
+                  MIN(authors.name)         AS author_name,
+                  JSON_AGG(reporters.id)    AS reporter_ids,
+                  JSON_AGG(reporters.name)  AS reporter_names,
+                  JSON_AGG(flag_types.name) AS report_types,
+                  MIN(flags.created_at)     AS created_at,
+                  MAX(flags.created_at)     AS updated_at
             FROM flags
                  JOIN users AS reporters ON reporters.id = flags.user_id
                  JOIN flag_types ON flags.type_id = flag_types.id
@@ -68,6 +69,7 @@ class FlagController extends BaseController
                 $record->author_name,
                 \json_decode($record->reporter_ids),
                 \array_unique(\json_decode($record->reporter_names)),
+                \array_values(\array_unique(\json_decode($record->report_types))),
                 new Carbon($record->created_at),
                 new Carbon($record->updated_at),
                 $record->forum_id,

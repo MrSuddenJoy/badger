@@ -47,6 +47,7 @@ const plugins = [
         'fa-ban',
         'fa-facebook',
         'fa-bolt',
+        'fa-balance-scale',
         'fa-column',
         'fa-shopping-cart',
         'fa-envelope',

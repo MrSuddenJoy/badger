@@ -3,11 +3,15 @@
     <div class="d-flex justify-content-between">
       <div>
         <p class="mb-0 text-right">
+          <i class="fas fa-balance-scale"></i>
           <a href="{{ post.url }}">Sprawa #{{ post.id }}</a>
+          <span class="badge badge-primary ml-1">
+            Nowa
+          </span>
         </p>
       </div>
       <div>
-        <span class="text-muted" title="Ostatnia aktywność w sprawie: {{ post.updatedAgo }}">
+        <span class="text-muted" title="Ostatnia aktywność w sprawie: {{ post.updatedAt }}">
           ostatnia aktywność:
           <b>{{ post.updatedAgo }}</b>
           <i class="fas fa-history"></i>
@@ -17,20 +21,32 @@
   </div>
   <div class="list-group list-group-flush">
     <div class="list-group-item">
-      Uczestnicy: <b>{{ post.reporterNames|json_encode|raw }}</b>
-    </div>
-    <div class="list-group-item">
-      <div class="d-flex justify-content-between">
-        <span>{{ post.authorMention }} napisał(a):</span>
-        <a href="{{ post.forumUrl }}">{{ post.forumSlug }}</a>
+      <div>
+        <i class="fas fa-user-edit"></i>
+        {{ post.authorMention }} napisał(a) w: <a href="{{ post.forumUrl }}">{{ post.forumSlug }}</a>:
       </div>
-      <div class="post-preview" style="margin: 0.25rem 0;">
-        {{ post.preview }}
+      <div>
+        <div class="d-inline-block post-preview" style="margin: 0.15rem 0;">
+          {{ post.preview }}
+        </div>
       </div>
-      <i class="fas fa-user-edit"></i>
-      <small class="text-muted" title="Post napisany: {{ post.createdAgo }}">
-        {{ post.createdAgo }} ({{ post.createdAt }})
+      <small class="text-muted" title="Post napisany: {{ post.createdAt }}">
+        {{ post.createdAgo }}
       </small>
+    </div>
+  </div>
+  <div class="list-group-item">
+    <div class="d-flex justify-content-between">
+      <span>
+        <i class="fas fa-user-times"></i>
+        Zgłaszający:
+        <b>{{ post.reporterNames|json_encode|raw }}</b>
+      </span>
+      <span class="text-muted">
+        z powodu
+        <b>{{ post.reportTypes|json_encode|raw }}</b>
+        <i class="fas fa-flag"></i>
+      </span>
     </div>
   </div>
 </div>
