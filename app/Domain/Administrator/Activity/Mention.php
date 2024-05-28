@@ -8,26 +8,25 @@ class Mention
 {
     public static function of(User $user): Mention
     {
-        return new Mention($user);
+        return new Mention($user->id, $user->name);
     }
 
-    private function __construct(private User $user)
+    public function __construct(private int $userId, private string $userName)
     {
     }
 
     public function mention(): TwigLiteral
     {
-        $url = route('profile', [$this->user->id]);
-        return new TwigLiteral('<a class="mention" href="' . \htmlSpecialChars($url) . '">' . '@' . $this->user->name . '</a>');
+        $url = route('profile', [$this->userId]);
+        return new TwigLiteral('<a class="mention" href="' . \htmlSpecialChars($url) . '">' . '@' . $this->userName . '</a>');
     }
 
     public function mentionString(): string
     {
-        $username = $this->user->name;
-        if ($this->containsAnyOf($username, '. ()')) {
-            return "@{{$username}}";
+        if ($this->containsAnyOf($this->userName, '. ()')) {
+            return "@{{$this->userName}}";
         }
-        return '@' . $username;
+        return '@' . $this->userName;
     }
 
     private function containsAnyOf(string $string, string $characters): bool

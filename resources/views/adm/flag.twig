@@ -1,6 +1,42 @@
 {% extends 'adm.base' %}
-{% block title %}Raporty użytkowników {{ parent() }}{% endblock %}
+{% block title %}Zgłoszone posty {{ parent() }}{% endblock %}
 
-{% block card %}
-    {{ grid(grid) }}
+{% block container %}
+  <div class="alert alert-info">
+    Na potrzeby rozwoju funkcjonalności,
+    wyświetlanych jest tylko 20 najświeższych postów.
+  </div>
+
+  {% for post in posts %}
+    <div class="card card-default">
+      <div class="card-header">
+        <div class="d-flex justify-content-between">
+          <span>
+            {{ post.authorMention }} napisał(a):
+          </span>
+          <span>
+            <a href="{{ post.forumUrl }}">
+              {{ post.forumSlug }}
+            </a>
+          </span>
+        </div>
+      </div>
+      <div class="card-body">
+        {{ post.preview }}
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-between">
+          <div>
+            <a class="btn btn-secondary">
+              Pokaż
+            </a>
+          </div>
+          <div>
+            <p class="mb-0 text-right">Biorący udział</p>
+            <p class="mb-0 text-right">{{ post.reporterNames|json_encode|raw }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
 {% endblock %}
