@@ -11,9 +11,9 @@
     <div class="card card-default">
       <div class="card-header">
         <div class="d-flex justify-content-between">
-          <span>
-            {{ post.authorMention }} napisał(a):
-          </span>
+          <div>
+            <p class="mb-0 text-right">{{ post.reporterNames|json_encode|raw }}</p>
+          </div>
           <span>
             <a href="{{ post.forumUrl }}">
               {{ post.forumSlug }}
@@ -22,19 +22,11 @@
         </div>
       </div>
       <div class="card-body">
-        {{ post.preview }}
-      </div>
-      <div class="card-footer">
-        <div class="d-flex justify-content-between">
-          <div>
-            <a class="btn btn-secondary">
-              Pokaż
-            </a>
-          </div>
-          <div>
-            <p class="mb-0 text-right">Biorący udział</p>
-            <p class="mb-0 text-right">{{ post.reporterNames|json_encode|raw }}</p>
-          </div>
+        <div>
+          {{ post.authorMention }} napisał(a):
+        </div>
+        <div class="post-preview">
+          {{ post.preview }}
         </div>
       </div>
     </div>
