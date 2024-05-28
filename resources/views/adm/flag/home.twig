@@ -1,0 +1,13 @@
+{% extends 'adm.base' %}
+{% block title %}Sprawy {{ parent() }}{% endblock %}
+
+{% block container %}
+  <div class="alert alert-info">
+    Na potrzeby rozwoju funkcjonalności,
+    wyświetlanych jest tylko 20 najświeższych postów.
+  </div>
+
+  {% for post in posts %}
+    {% include 'adm.flag._post' %}
+  {% endfor %}
+{% endblock %}

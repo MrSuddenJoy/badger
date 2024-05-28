@@ -2,6 +2,7 @@
 namespace Coyote\Domain;
 
 use Carbon\Carbon;
+use Carbon\CarbonInterval;
 use Coyote\Domain\Administrator\Activity\Mention;
 use Coyote\Domain\Administrator\Activity\PostPreview;
 use Coyote\View\Twig\TwigLiteral;
@@ -24,6 +25,34 @@ class ReportedPost
     )
     {
         $this->preview = new PostPreview($this->contentMarkdown);
+    }
+
+    public function url():string
+    {
+        return \route('adm.flag.show', [$this->id]);
+    }
+    
+    public function updatedAgo(): string
+    {
+        return $this->ago($this->updatedAt);
+    }
+
+    public function createdAgo(): string
+    {
+        return $this->ago($this->createdAt);
+    }
+
+    private function ago(Carbon $dateTime): string
+    {
+        return $this->firstWords($dateTime->diff(Carbon::now()), 4) . ' temu';
+    }
+
+    private function firstWords(CarbonInterval $interval, int $words): string
+    {
+        return \implode(' ',
+            \array_slice(
+                \explode(' ', $interval),
+                0, $words));
     }
 
     public function preview(): TwigLiteral

@@ -1,0 +1,12 @@
+{% extends 'adm.base' %}
+{% block title %}Sprawy {{ parent() }}{% endblock %}
+
+{% block container %}
+  {% include 'adm.flag._post' %}
+
+  <div>
+    <a href="{{ backUrl }}" class="btn btn-secondary">
+      Powrót
+    </a>
+  </div>
+{% endblock %}

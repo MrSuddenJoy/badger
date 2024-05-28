@@ -2,6 +2,8 @@
 namespace Coyote\Http\Controllers\Adm;
 
 use Carbon\Carbon;
+use Coyote\Domain\ReportedPost;
+use Coyote\Post;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 
@@ -9,10 +11,33 @@ class FlagController extends BaseController
 {
     public function index(): View
     {
-        $this->breadcrumb->push('Zaraportowane posty', route('adm.flag'));
+        $this->breadcrumb->push('Sprawy', route('adm.flag'));
+        return $this->view('adm.flag.home')->with([
+            'posts' => $this->reportedPosts(),
+        ]);
+    }
 
+    public function show(Post $post): View
+    {
+        $this->breadcrumb->push('Sprawy', route('adm.flag'));
+        $this->breadcrumb->push('#' . $post->id, route('adm.flag.show', [$post->id]));
+        $this->breadcrumb->push('Podgląd', '');
+
+        $arrayFilter = \array_values(\array_filter(
+            $this->reportedPosts(),
+            fn(ReportedPost $r) => $r->id === $post->id,
+        ));
+        return $this->view('adm.flag.show')->with([
+            'post'    => $arrayFilter[0],
+            'backUrl' => route('adm.flag'),
+        ]);
+    }
+
+    private function reportedPosts(): array
+    {
         $query = DB::select(<<<query
-            SELECT posts.id,
+            SELECT 
+                  posts.id AS post_id,
                   MIN(posts.text)          AS post,
                   MIN(posts.forum_id)      AS forum_id,
                   MIN(forums.slug)         AS forum_slug,
@@ -35,22 +60,20 @@ class FlagController extends BaseController
             LIMIT 20;
             query,);
 
-        return $this->view('adm.flag')->with([
-            'posts' => \array_map(
-                fn(\stdClass $record) => new \Coyote\Domain\ReportedPost(
-                    $record->id,
-                    $record->post,
-                    $record->author_id,
-                    $record->author_name,
-                    \json_decode($record->reporter_ids),
-                    \array_unique(\json_decode($record->reporter_names)),
-                    new Carbon($record->created_at),
-                    new Carbon($record->updated_at),
-                    $record->forum_id,
-                    $record->forum_slug,
-                ),
-                $query,
+        return \array_map(
+            fn(\stdClass $record) => new \Coyote\Domain\ReportedPost(
+                $record->post_id,
+                $record->post,
+                $record->author_id,
+                $record->author_name,
+                \json_decode($record->reporter_ids),
+                \array_unique(\json_decode($record->reporter_names)),
+                new Carbon($record->created_at),
+                new Carbon($record->updated_at),
+                $record->forum_id,
+                $record->forum_slug,
             ),
-        ]);
+            $query,
+        );
     }
 }
