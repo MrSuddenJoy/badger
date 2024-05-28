@@ -67,6 +67,11 @@ class ReportedPost
                 0, $words));
     }
 
+    public function html(): TwigLiteral
+    {
+        return $this->preview->html();
+    }
+
     public function preview(): TwigLiteral
     {
         return $this->preview->previewHtml();

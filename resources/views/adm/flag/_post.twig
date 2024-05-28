@@ -21,32 +21,34 @@
     <div class="list-group-item">
       {% for type in post.reportTypes %}
         <span class="mr-2">
-          <i class="far fa-flag"></i>
+          <i class="far fa-flag fa-fw"></i>
           {{ type }}
         </span>
       {% endfor %}
     </div>
     <div class="list-group-item">
-      <i class="far fa-user"></i>
+      <i class="far fa-user fa-fw"></i>
       Zgłaszający:
       {% for reporterMention in post.reporterMentions %}
         {{ reporterMention }}
       {% endfor %}
     </div>
     <div class="list-group-item">
-      <div style="font-size:0.75em;">
-        <div>
-          <i class="fas fa-user-edit"></i>
-          {{ post.authorMention }} napisał(a) w: <a href="{{ post.forumUrl }}">{{ post.forumSlug }}</a>:
-        </div>
-        <div>
-          <div class="d-inline-block post-preview" style="margin: 0.15rem 0;">
-            {{ post.preview }}
+      <div class="d-flex">
+        <i class="fas fa-user-edit fa-fw"></i>
+        <div class="ml-1" style="font-size:0.75em;">
+          <div>
+            {{ post.authorMention }} napisał(a) w: <a href="{{ post.forumUrl }}">{{ post.forumSlug }}</a>:
           </div>
+          <div>
+            <div class="d-inline-block post-preview" style="margin: 0.15rem 0;">
+              {{ post.preview }}
+            </div>
+          </div>
+          <small class="text-muted" title="Post napisany: {{ post.createdAt }}">
+            {{ post.createdAgo }}
+          </small>
         </div>
-        <small class="text-muted" title="Post napisany: {{ post.createdAt }}">
-          {{ post.createdAgo }}
-        </small>
       </div>
     </div>
   </div>

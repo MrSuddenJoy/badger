@@ -2,20 +2,69 @@
 {% block title %}Sprawy {{ parent() }}{% endblock %}
 
 {% block container %}
-  {% include 'adm.flag._post' %}
+  <div class="col-lg-6 col-xl-5 px-0">
+    <div class="card">
+      <div class="card-header">
+        <i class="fas fa-balance-scale"></i>
+        Sprawa #{{ post.id }}
+      </div>
+      <div class="list-group list-group-flush">
+        <div class="list-group-item">
+          Status:
+          <span class="badge badge-primary">Nowa</span>
+        </div>
+        <div class="list-group-item">
+          Ostatnia aktywność:
+          <span title="Ostatnia aktywność w sprawie: {{ post.updatedAt }}">
+            <i class="fas fa-history"></i>
+            {{ post.updatedAgo }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <h4 class="mb-3">Historia</h4>
+  <h4 class="mt-4 mb-3">Podgląd</h4>
+  <p class="mb-2">
+    Forum / <a href="{{ post.forumUrl }}">{{ post.forumSlug }}</a>:
+  </p>
+  <div class="card card-post">
+    <div class="card-header">
+      <div class="row">
+        <div class="col-2">{{ post.authorMention }}</div>
+        <div class="col-10"><small>{{ post.createdAgo }}</small></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-2">
+          <img class="post-avatar img-thumbnail" src="" alt="{{ post.authorName }}"/>
+        </div>
+        <div class="col-10">{{ post.html }}</div>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-10 text-right text-muted">
+          <i class="fas fa-ellipsis-h mr-2"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h4 class="mt-4 mb-3">Aktywność</h4>
   <div class="mb-4">
     {% for report in reports %}
       <div class="d-flex mb-2">
-        <i class="fas fa-flag mt-1 mr-2"></i>
+        <i class="fas fa-fw fa-flag mt-1 mr-2"></i>
         <div>
-           {{ report.reporterMention }}
+          {{ report.reporterMention }}
           zgłosił
 
           <span class="badge badge-secondary">
-            <i class="fa fa-flag"></i>
-            <b>{{ report.reportType }}</b>
+            <i class="far fa-flag"></i>
+            {{ report.reportType }}
           </span>
 
           {% if report.reportNote %}
@@ -24,10 +73,29 @@
             bez dopisku.
           {% endif %}
 
-          <small class="d-block text-muted"> {{ report.reportedAt }}</small>
+          <small class="d-block text-muted">
+            {{ report.reportedAt }},
+            {{ report.reportedAgo }}
+          </small>
         </div>
       </div>
     {% endfor %}
+    <div>
+      <div class="d-flex">
+        <i class="fas fa-fw fa-user-edit mt-1 mr-2"></i>
+        <div>
+          {{ post.authorMention }} dodał
+
+          <span class="badge badge-secondary">
+            <i class="far fa-comment"></i>
+            Post
+          </span>
+          <small class="d-block text-muted">
+            {{ post.createdAt }}, {{ post.createdAgo }}
+          </small>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div>
