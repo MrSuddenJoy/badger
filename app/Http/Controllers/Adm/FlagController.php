@@ -21,7 +21,6 @@ class FlagController extends BaseController
     {
         $this->breadcrumb->push('Sprawy', route('adm.flag'));
         $this->breadcrumb->push('#' . $post->id, route('adm.flag.show', [$post->id]));
-        $this->breadcrumb->push('Post @' . $post->user->name, '');
 
         return $this->view('adm.flag.show')->with([
             'post'    => $this->reportedPostById($post->id),
