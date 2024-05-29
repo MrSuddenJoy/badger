@@ -10,8 +10,8 @@
       </div>
       <div class="list-group list-group-flush">
         <div class="list-group-item">
-          Status:
-          <span class="badge badge-primary">Nowa</span>
+          Status zgłoszenia:
+          <span class="badge badge-primary">Nowe</span>
         </div>
         <div class="list-group-item">
           Ostatnia aktywność:
@@ -24,40 +24,7 @@
     </div>
   </div>
 
-  <h4 class="mt-4 mb-3">Podgląd</h4>
-  <p class="mb-2">
-    Forum / <a href="{{ post.forumUrl }}">{{ post.forumSlug }}</a>:
-  </p>
-  <div class="card card-post">
-    <div class="card-header">
-      <div class="row">
-        <div class="col-2">{{ post.authorMention }}</div>
-        <div class="col-10"><small>{{ post.createdAgo }}</small></div>
-      </div>
-    </div>
-    <div class="card-body">
-      <div class="row">
-        <div class="col-2">
-          <img
-              class="post-avatar img-thumbnail"
-              src="{{ post.authorAvatar }}"
-              alt="{{ post.authorName }}"
-          />
-        </div>
-        <div class="col-10">{{ post.html }}</div>
-      </div>
-    </div>
-    <div class="card-footer">
-      <div class="row">
-        <div class="col-2"></div>
-        <div class="col-10 text-right text-muted">
-          <i class="fas fa-ellipsis-h mr-2"></i>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <h4 class="mt-4 mb-3">Aktywność</h4>
+  <h4 class="mt-4 mb-2">Aktywność</h4>
   <div class="mb-4">
     {% for report in reports %}
       <div class="d-flex mb-2">
@@ -78,8 +45,7 @@
           {% endif %}
 
           <small class="d-block text-muted">
-            {{ report.reportedAt }},
-            {{ report.reportedAgo }}
+            {{ report.reportedAt }}, {{ report.reportedAgo }}
           </small>
         </div>
       </div>
@@ -97,6 +63,41 @@
           <small class="d-block text-muted">
             {{ post.createdAt }}, {{ post.createdAgo }}
           </small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h4 class="mt-4 mb-2">Podgląd</h4>
+  <p class="mb-2">
+    Forum / <a href="{{ post.forumUrl }}">{{ post.forumSlug }}</a>:
+  </p>
+  <div class="col-lg-10 col-xl-8 px-0">
+    <div class="card card-post">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-2">{{ post.authorMention }}</div>
+          <div class="col-10"><small>{{ post.createdAgo }}</small></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-2">
+            <img
+                class="post-avatar img-thumbnail"
+                src="{{ post.authorAvatar }}"
+                alt="{{ post.authorName }}"
+            />
+          </div>
+          <div class="col-10">{{ post.html }}</div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="row">
+          <div class="col-2"></div>
+          <div class="col-10 text-right text-muted">
+            <i class="fas fa-ellipsis-h mr-2"></i>
+          </div>
         </div>
       </div>
     </div>
