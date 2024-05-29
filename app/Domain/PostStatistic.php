@@ -3,6 +3,7 @@ namespace Coyote\Domain;
 
 class PostStatistic
 {
+    // Standard built-in function
     public function __construct(
         public int $all,
         public int $deletedBySelf,

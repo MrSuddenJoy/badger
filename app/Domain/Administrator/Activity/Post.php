@@ -2,11 +2,12 @@
 namespace Coyote\Domain\Administrator\Activity;
 
 use Carbon\Carbon;
-use Coyote\View\Twig\TwigLiteral;
+use Coyote\Domain\Administrator\View\PostMarkdown;
+use Coyote\Domain\Html;
 
 class Post
 {
-    private PostPreview $preview;
+    private PostMarkdown $post;
 
     public function __construct(
         public string  $text,
@@ -19,22 +20,22 @@ class Post
         public bool    $isThread,
     )
     {
-        $this->preview = new PostPreview($text);
+        $this->post = new PostMarkdown($text);
     }
 
-    public function html(): TwigLiteral
+    public function contentHtml(): Html
     {
-        return $this->preview->html();
+        return $this->post->contentHtml();
     }
 
-    public function previewHtml(): ?TwigLiteral
+    public function previewHtml(): Html
     {
-        return $this->preview->previewHtml();
+        return $this->post->previewHtml();
     }
 
     public function isLong(): bool
     {
-        return $this->preview->hasPreview();
+        return $this->post->hasPreview();
     }
 
     public function dateString(): string
