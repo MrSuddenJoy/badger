@@ -209,7 +209,7 @@ W przypadku znalezienia błędów prosimy o zgłaszanie ich bezpośrednio na e-m
 
 ## Jak możesz pomóc?
 
-Zachęcamy do aktywnego udziału w rozwoju projektu. Zajrzyj na zakładkę *Issues* i zobacz jakie zadanie możesz zrealizować. Realizujemy tylko te zadania, które są zaakceptowane i przypisane do wersji 2.0.
+Zachęcamy do aktywnego udziału w rozwoju projektu. Zajrzyj na zakładkę *Issues* i zobacz jakie zadanie możesz zrealizować. Realizujemy tylko te zadania, które są zaakceptowane!
 
 1. Utwórz fork repozytorium
 2. Wprowadź zmiany
