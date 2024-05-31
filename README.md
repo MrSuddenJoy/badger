@@ -1,7 +1,5 @@
 # Coyote
 
-[![Build Status](https://travis-ci.org/adam-boduch/coyote.svg?branch=master)](https://travis-ci.org/adam-boduch/coyote)
-
 Coyote to nazwa systemu obsługującego serwis [4programmers.net].
 
 [4programmers.net]: https://4programmers.net/
@@ -207,7 +205,7 @@ docker-compose exec php php artisan queue:listen --sleep=10
 
 ## Jak zgłaszać błędy bezpieczeństwa?
 
-W przypadku znalezienia błędów prosimy o zgłaszanie ich bezpośrednio na e-mail: support@4programmers.net
+W przypadku znalezienia błędów prosimy o zgłaszanie ich bezpośrednio na e-mail: wojtek@wojciechxtx.com
 
 ## Jak możesz pomóc?
 
