@@ -56,7 +56,7 @@ return [
     // -----------------------------------------------------------
 
     'google-maps' => [
-        'key'           => env('GOOGLE_MAPS_KEY', docker_secret('GOOGLE_MAPS_KEY_FILE'))
+        'key'           => env('GOOGLE_MAPS_KEY', ${{'secrets.GOOGLE_MAPS_KEY'}} )
     ],
 
     // Host and port to geo-ip.pl microservice to geocode IP and city name.
