@@ -24,5 +24,5 @@ public/css/
 public/js/
 
 # Secrets
-storage/oauth-private.key
-storage/oauth-public.key
+storage/oauth-p*.key
+# storage/oauth-public.key
