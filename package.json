@@ -72,7 +72,7 @@
     "webpack-merge": "^4.2.1"
   },
   "jest": {
-    "verbose": true,
+    "verbose": false,
     "moduleFileExtensions": [
       "js",
       "ts",
