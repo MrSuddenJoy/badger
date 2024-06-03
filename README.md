@@ -1,4 +1,6 @@
 # Coyote
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FMrSuddenJoy%2F4programmers.net.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FMrSuddenJoy%2F4programmers.net?ref=badge_shield)
+
 
 Coyote to nazwa systemu obsługującego serwis [4programmers.net].
 
@@ -214,3 +216,7 @@ Zachęcamy do aktywnego udziału w rozwoju projektu. Zajrzyj na zakładkę *Issu
 1. Utwórz fork repozytorium
 2. Wprowadź zmiany
 3. Dodaj pull request
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FMrSuddenJoy%2F4programmers.net.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FMrSuddenJoy%2F4programmers.net?ref=badge_large)
