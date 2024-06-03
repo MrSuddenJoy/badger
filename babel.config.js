@@ -16,7 +16,6 @@ module.exports = {
         "languages": [
           "markup",
           "css",
-          "csv",
           "clike",
           "javascript",
           "ada",
