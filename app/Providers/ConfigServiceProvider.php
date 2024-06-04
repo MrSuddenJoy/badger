@@ -20,7 +20,6 @@ class ConfigServiceProvider extends ServiceProvider
     {
         setlocale(LC_ALL, ['pl_PL.UTF-8', 'polish_pol']);
         Carbon::setLocale(config('app.locale'));
-
         config([
             //
         ]);

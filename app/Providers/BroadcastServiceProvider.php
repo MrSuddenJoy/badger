@@ -16,7 +16,6 @@ class BroadcastServiceProvider extends ServiceProvider
     {
         /** @var \Illuminate\Broadcasting\Broadcasters\Broadcaster $broadcast */
         $broadcast = $this->app[Factory::class];
-
         $broadcast->routes();
     }
 }

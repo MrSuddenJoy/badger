@@ -34,9 +34,7 @@ class ReputationServiceProvider extends ServiceProvider
         foreach ($this->provides() as $provider) {
             $segments = explode('.', $provider);
             array_shift($segments);
-
             $class = '\\Coyote\\Services\\Reputation\\' . implode('\\', array_map('ucwords', $segments));
-
             $this->app->bind($provider, function ($app) use ($class) {
                 return new $class(
                     $app[ReputationRepositoryInterface::class]
@@ -58,13 +56,10 @@ class ReputationServiceProvider extends ServiceProvider
         return [
             'reputation.post.vote',
             'reputation.post.accept',
-
             'reputation.microblog.create',
             'reputation.microblog.vote',
-
             'reputation.wiki.create',
             'reputation.wiki.update',
-
             'reputation.guide.create'
         ];
     }
