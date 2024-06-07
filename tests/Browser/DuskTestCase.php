@@ -14,11 +14,12 @@ abstract class DuskTestCase extends \Laravel\Dusk\TestCase
     {
         $chromeOptions = new ChromeOptions();
         $chromeOptions->addArguments([
-            '--disable-gpu',
-            '--headless',
-            '--no-sandbox',
-            '--ignore-ssl-errors',
-            '--whitelisted-ips=""'
+            'disable-gpu',
+            'headless',
+            'no-sandbox',
+            'ignore-ssl-errors',
+            'whitelisted-ips=""',
+            'start-maximized'
         ]);
         $capabilities = DesiredCapabilities::chrome();
         $capabilities->setCapability(ChromeOptions::CAPABILITY, $chromeOptions);
