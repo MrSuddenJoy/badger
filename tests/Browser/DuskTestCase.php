@@ -12,7 +12,7 @@ abstract class DuskTestCase extends \Laravel\Dusk\TestCase
 
     protected function driver(): RemoteWebDriver
     {
-        $chromeOptions = new ChromeOptions;
+        $chromeOptions = new ChromeOptions();
         $chromeOptions->addArguments([
             '--disable-gpu',
             '--headless',
