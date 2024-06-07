@@ -1,13 +1,21 @@
 {
   "type": "project",
-  "name": "adam-boduch/coyote",
+  "name": "MrSuddenJoy/4programmers.net",
   "description": "4programmers.net",
   "homepage": "http://4programmers.net",
   "license": "MIT",
   "authors": [
     {
+      "name": "MrSuddenJoy",
+      "email": "wojtek@wojciechxtx.com",
+      "homepage": "https://wojciechxtx.com",
+      "role": "development"
+    },
+    {
       "name": "Adam Boduch",
-      "email": "adam@boduch.net"
+      "email": "adam@boduch.net",
+      "role": "Founder",
+      "homepage": "https://boduch.net"
     }
   ],
   "require": {
