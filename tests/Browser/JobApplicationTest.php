@@ -15,13 +15,10 @@ class JobApplicationTest extends DuskTestCase
     {
         try {
             $mpdf = new Mpdf(['tempDir' => storage_path('app')]);
-            $mpdf->WriteHTML($this->faker->text);
-
+            $mpdf->WriteHTML($this->faker->similar_text);
             file_put_contents(storage_path('demo.pdf'), $mpdf->Output('', 'S'));
-
             $this->browse(function (Browser $browser) {
                 $job = factory(Job::class)->create(['email' => $this->faker->email]);
-
                 $browser
                     ->visit('/Praca/Application/' . $job->id)
                     ->resize(1920, 1080)
@@ -33,11 +30,8 @@ class JobApplicationTest extends DuskTestCase
                     ->type('github', $url = $this->faker->url)
                     ->press('Wyślij')
                     ->waitForText('Zgłoszenie zostało prawidłowo wysłane.');
-
                 $this->assertDatabaseHas('job_applications', ['name' => $name, 'email' => $email, 'phone' => $phone, 'github' => $url]);
-
                 $job = factory(Job::class)->create(['email' => $this->faker->email]);
-
                 $browser->visit('/Praca/Application/' . $job->id)
                     ->assertInputValue('name', $name)
                     ->assertInputValue('email', $email)
