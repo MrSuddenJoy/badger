@@ -17,14 +17,14 @@ class ConfirmTest extends DuskTestCase
     {
         /** @var User $user */
         $user = factory(User::class)->create([
-            'password'   => bcrypt('123'),
+            'password'   => bcrypt('asdfghH1!'),
             'is_confirm' => false,
         ]);
 
         $this->browse(function (Browser $browser) use ($user) {
             $browser
                 ->visit('/Confirm')
-                ->click('#gdpr-all')
+                ->click('#gdpr')
                 ->waitUntilMissing('.gdpr-modal')
                 ->type('email', $user->email)
                 ->press('Wyślij e-mail z linkiem aktywacyjnym')
@@ -38,7 +38,7 @@ class ConfirmTest extends DuskTestCase
 
         $this->browse(function (Browser $browser) use ($faker) {
             $browser->visit('/Confirm')
-                ->click('#gdpr-all')
+                ->click('#gdpr')
                 ->waitUntilMissing('.gdpr-modal')
                 ->type('email', $faker->email)
                 ->press('Wyślij e-mail z linkiem aktywacyjnym')
@@ -49,11 +49,11 @@ class ConfirmTest extends DuskTestCase
     public function testSendVerificationFailedToDuePreviousVerificationProcess()
     {
         /** @var User $user */
-        $user = factory(User::class)->create(['password' => bcrypt('123')]);
+        $user = factory(User::class)->create(['password' => bcrypt('asdfghH1!')]);
 
         $this->browse(function (Browser $browser) use ($user) {
             $browser->visit('/Confirm')
-                ->click('#gdpr-all')
+                ->click('#gdpr')
                 ->waitUntilMissing('.gdpr-modal')
                 ->type('email', $user->email)
                 ->press('Wyślij e-mail z linkiem aktywacyjnym')
@@ -64,7 +64,7 @@ class ConfirmTest extends DuskTestCase
     public function testSendVerificationEmailWithDifferentEmail()
     {
         /** @var User $user */
-        $user = factory(User::class)->create(['password' => bcrypt('123'), 'is_confirm' => false, 'gdpr' => '{}']);
+        $user = factory(User::class)->create(['password' => bcrypt('asdfghH1!'), 'is_confirm' => false, 'gdpr' => '{}']);
         $faker = Factory::create();
 
         $this->browse(function (Browser $browser) use ($user, $faker) {
