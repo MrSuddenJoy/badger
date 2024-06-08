@@ -6,10 +6,16 @@
   "license": "MIT",
   "authors": [
     {
+      "name": "MrSuddenJoy",
+      "email": "wojtek@wojciechxtx.com",
+      "homepage": "https://wojciechxtx.com",
+      "role": "Development"
+    },
+    {
       "name": "Adam Boduch",
       "email": "adam@boduch.net",
-      "name": "MrSuddenJoy",
-      "email": "wojtek@wojciechxtx.com"
+      "role": "Founder",
+      "homepage": "https://boduch.net"
     }
   ],
   "require": {

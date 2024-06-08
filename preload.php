@@ -3,11 +3,9 @@
 class Preloader
 {
     private static int $count = 0;
-
     private array $paths;
-
     private array $fileMap;
-
+    
     public function __construct(string ...$paths)
     {
         $this->paths = $paths;
@@ -39,9 +37,8 @@ class Preloader
         foreach ($this->paths as $path) {
             $this->loadPath(rtrim($path, '/'));
         }
-
+        
         $count = self::$count;
-
         echo "[Preloader] Preloaded {$count} classes" . PHP_EOL;
     }
 
@@ -51,7 +48,6 @@ class Preloader
         // we'll load all files in it
         if (is_dir($path)) {
             $this->loadDir($path);
-
             return;
         }
 
@@ -70,10 +66,8 @@ class Preloader
             if (in_array($file, ['.', '..'])) {
                 continue;
             }
-
             $this->loadPath("{$path}/{$file}");
         }
-
         closedir($handle);
     }
 
@@ -89,9 +83,7 @@ class Preloader
         // Finally we require the path,
         // causing all its dependencies to be loaded as well
         @opcache_compile_file($path);
-
         self::$count++;
-
         echo "[Preloader] Preloaded `{$class}`" . PHP_EOL;
     }
 }

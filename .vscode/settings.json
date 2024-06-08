@@ -1,0 +1,10 @@
+{
+    "workbench.colorTheme": "GitHub Dark Default",
+    "editor.minimap.enabled": true,
+
+    // Git
+    "git.autofetch": true,
+    "git.autofetchPeriod": 180,
+    "git.confirmEmptyCommits": true,
+    "git.confirmSync": true
+}

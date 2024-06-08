@@ -98,7 +98,6 @@ class AuthServiceProvider extends ServiceProvider
         foreach ($this->abilities as $ability) {
             $gate->define($ability, function (User $user) use ($ability) {
                 $permissions = $this->getUserPermissions($user);
-
                 return $permissions[$ability] ?? false;
             });
         }
@@ -117,14 +116,12 @@ class AuthServiceProvider extends ServiceProvider
         // file cache driver does not support tagging.
         if (config('cache.default') !== 'file') {
             $cache = $this->app[CacheManager::class];
-
             $result = $cache->tags('permissions')->remember('permission:' . $user->id, self::CACHE_TTL, function () use ($user) {
                 return $user->getPermissions()->toArray();
             });
         } else {
             $result = $user->getPermissions()->toArray();
         }
-
         return $this->permissions[$user->id] = $result;
     }
 }

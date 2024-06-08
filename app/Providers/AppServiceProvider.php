@@ -59,7 +59,6 @@ class AppServiceProvider extends ServiceProvider
         $this->app['validator']->extend('cc_cvc', 'Coyote\Http\Validators\CreditCardValidator@validateCvc');
         $this->app['validator']->extend('cc_date', 'Coyote\Http\Validators\CreditCardValidator@validateDate');
         $this->app['validator']->extend('host', 'Coyote\Http\Validators\HostValidator@validateHost');
-
         $this->app['validator']->replacer('reputation', function ($message, $attribute, $rule, $parameters) {
             return str_replace(':point', $parameters[0], $message);
         });
@@ -81,7 +80,6 @@ class AppServiceProvider extends ServiceProvider
         });
 
         $this->registerMacros();
-
         Paginator::useBootstrap();
     }
 
@@ -126,7 +124,6 @@ class AppServiceProvider extends ServiceProvider
         $this->app->resolving(Invoice\Pdf::class, function (Invoice\Pdf $pdf, $app) {
             $pdf->setVendor($app['config']->get('vendor'));
         });
-
         $this->app->singleton(OAuth::class, SocialiteOAuth::class);
     }
 
@@ -135,7 +132,6 @@ class AppServiceProvider extends ServiceProvider
         Collection::macro('flush', function () {
             $this->items = [];
         });
-
         Collection::macro('exceptUser', function (User $auth = null) {
             if ($auth === null) {
                 return $this;
@@ -168,7 +164,6 @@ class AppServiceProvider extends ServiceProvider
                     $post->topic->setRelation('forum', $forum);
                     $post->setRelation('topic', Tracker::make($post->topic));
                 }
-
                 return $forum;
             });
         });
@@ -185,7 +180,6 @@ class AppServiceProvider extends ServiceProvider
                 // move category at the end
                 $collection->put('Inne', $collection->splice(0, 1)['Inne']);
             }
-
             return $collection;
         });
 
@@ -202,7 +196,6 @@ class AppServiceProvider extends ServiceProvider
 
             $stop = microtime(true);
             logger()->debug("Host lookup time: " . ($stop - $start) . "ms");
-
             return $this->clientHost;
         });
 
@@ -217,12 +210,9 @@ class AppServiceProvider extends ServiceProvider
 
             /** @var \Coyote\Post|\Coyote\Pm|\Coyote\Microblog|\Coyote\Firm $parent */
             $parent = $this->getParent();
-
             $assets = collect($assets)->map(fn($attributes) => Asset::find($attributes['id']))->keyBy('id');
-
             $ids = $assets->pluck('id')->toArray();
             $current = $parent->assets->keyBy('id');
-
             $detach = array_diff($current->keys()->toArray(), $ids);
             $attach = array_diff($ids, $current->keys()->toArray());
 

@@ -64,13 +64,11 @@ class RouteServiceProvider extends ServiceProvider
         $this->router->pattern('guide', '[0-9]+');
         $this->router->pattern('payment', '[0-9a-z\-]+');
         $this->router->pattern('banner', '[0-9a-f]{8}\b-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-\b[0-9a-f]{12}');
-
         $this->router->pattern('forum', '[A-Za-ząęśćłźżóń\-\_\/\.\+]+');
         $this->router->pattern('tag_name', '([a-ząęśżźćółń0-9\-\.\#\+])+');
         $this->router->pattern('slug', '.*');
         $this->router->pattern('path', '.*'); // being used on wiki routes
         $this->router->pattern('tab', 'Reputation|Post|Microblog'); // user's profile tabs
-
         $this->router->model('user', UserRepositoryInterface::class);
         $this->router->model('post', PostRepositoryInterface::class);
         $this->router->model('pastebin', PastebinRepositoryInterface::class);
@@ -85,7 +83,6 @@ class RouteServiceProvider extends ServiceProvider
         $this->router->model('tag', TagRepositoryInterface::class);
         $this->router->model('pm', PmRepositoryInterface::class);
         $this->router->model('guide', Guide::class);
-
         $this->router->bind('forum', function ($slug) {
             return $this->app->make(ForumRepositoryInterface::class, [$this->app])->where('slug', $slug)->firstOrFail();
         });
@@ -95,19 +92,15 @@ class RouteServiceProvider extends ServiceProvider
 
         // we use model instead of repository to avoid putting global criteria to all methods in repository
         $this->router->bind('topic_trashed', fn ($id) => Topic::withTrashed()->findOrFail($id));
-
         $this->router->bind('topic', function ($id) {
             $user = $this->getCurrentRequest()->user();
-
             if ($this->router->currentRouteName() === 'forum.topic' && $user && $user->can('forum-delete')) {
                 return Topic::withTrashed()->findOrFail($id);
             }
-
             return Topic::findOrFail($id);
         });
 
         $this->router->bind('any_microblog', fn ($id) => Microblog::withoutGlobalScopes()->findOrFail($id));
-
         parent::boot();
     }
 
@@ -119,7 +112,6 @@ class RouteServiceProvider extends ServiceProvider
     public function register()
     {
         parent::register();
-
         $this->router = $this->app->make(Router::class);
     }
 

@@ -27,7 +27,6 @@ class RepositoryServiceProvider extends ServiceProvider
     public function __construct(Application $app)
     {
         parent::__construct($app);
-
         $files = (new Filesystem())->allFiles(app_path('Repositories/Contracts'));
 
         foreach ($files as $file) {
