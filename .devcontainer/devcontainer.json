@@ -1,0 +1,8 @@
+{
+	"image": "mcr.microsoft.com/devcontainers/universal:2",
+	"features": {
+		"ghcr.io/jayree/devcontainer-features/npm-registry:1": {}
+	},
+	"init": true,
+	"name": "4programmers.net"
+}
