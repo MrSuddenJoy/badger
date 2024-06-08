@@ -1,6 +1,6 @@
 {
     "workbench.colorTheme": "GitHub Dark Default",
-    "editor.minimap.enabled": false,
+    "editor.minimap.enabled": true,
 
     // Git
     "git.autofetch": true,
