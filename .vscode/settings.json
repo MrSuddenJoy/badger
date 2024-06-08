@@ -1,8 +1,9 @@
 {
-    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.colorTheme": "Default Light Modern",
     "editor.minimap.enabled": true,
     "git.autofetch": true,
     "git.autofetchPeriod": 180,
     "git.confirmEmptyCommits": true,
-    "git.confirmSync": true
+    "git.confirmSync": true,
+    "files.autoSave": "onFocusChange"
 }
