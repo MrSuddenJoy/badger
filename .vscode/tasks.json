@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "npm",
+            "script": "watchedTaskBeginsRegExp",
+            "isBackground": true,
+            "presentation": {
+                "reveal": "never",
+                "group": "_runner",
+                "close": false
+            }
+        }
+    ]
+}
