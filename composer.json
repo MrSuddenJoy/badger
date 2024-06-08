@@ -14,13 +14,8 @@
     {
       "name": "Adam Boduch",
       "email": "adam@boduch.net",
-<<<<<<< HEAD
       "role": "Founder",
       "homepage": "https://boduch.net"
-=======
-      "name": "MrSuddenJoy",
-      "email": "wojtek@wojciechxtx.com"
->>>>>>> d6c34ffbc (Update composer info)
     }
   ],
   "require": {
