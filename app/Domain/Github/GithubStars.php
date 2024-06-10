@@ -1,9 +1,9 @@
 <?php
-namespace Coyote\Domain\Github;
+namespace App\Domain\Github;
 
 class GithubStars
 {
-    public function fetchStars(): ?int
+    public function fetchStars(): int
     {
       $noStars = 0;
 
@@ -21,14 +21,19 @@ class GithubStars
               // echo($noStars);
               return $noStars;
             }
-        }
     }
+
   /**
     * @MrSuddenJoy
     * @description This function aims in checking if corresponding public function has been run and returned whats expected from it.
   */
-    private function validateFetchStars(){
+    function validateFetchStars(){
       if ($this->fetchStars() !== null) {
         return true;
     }
+  }
+
+  function fnStart(){
+    return tru($this->fetchStars());
+  }
 }
