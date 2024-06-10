@@ -5,7 +5,6 @@ class GithubStars
 {
     public function fetchStars(): ?int
     {
-
       $noStars = 0;
 
         $result = @\file_get_contents(
@@ -23,8 +22,13 @@ class GithubStars
               return $noStars;
             }
         }
-        return null;
     }
-
-
+  /**
+    * @MrSuddenJoy
+    * @description This function aims in checking if corresponding public function has been run and returned whats expected from it.
+  */
+    private function validateFetchStars(){
+      if ($this->fetchStars() !== null) {
+        return true;
+    }
 }
