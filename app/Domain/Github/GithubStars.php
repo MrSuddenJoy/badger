@@ -17,4 +17,9 @@ class GithubStars
         return $noStars;
         }}
   }
+
+/*   public function checkIPs(){
+    $ghs2 = new GithubStars2();
+    $ghs2->usageFromAllowedIPS();
+  } */
 }
