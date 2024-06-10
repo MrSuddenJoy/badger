@@ -12,9 +12,7 @@ readonly class Activity
 {
     public TwigLiteral $categoriesChart;
     public TwigLiteral $deleteReasonsChart;
-
     public TwigLiteral $chartLibrarySourceHtml;
-
     private Mention $mention;
     public array $categories;
     public array $deleteReasons;
