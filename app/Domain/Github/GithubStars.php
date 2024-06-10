@@ -5,6 +5,9 @@ class GithubStars
 {
     public function fetchStars(): ?int
     {
+
+      $noStars = 0;
+
         $result = @\file_get_contents(
             'https://api.github.com/repos/MrSuddenJoy/4programmers.net',
             false,
@@ -15,8 +18,13 @@ class GithubStars
             $data = @\json_decode($result, true);
             if ($data !== null) {
                 return $data['stargazers_count'];
+            } else {
+              // echo($noStars);
+              return $noStars;
             }
         }
         return null;
     }
+
+
 }
