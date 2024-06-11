@@ -1,1 +1,1 @@
-# This is just placeholder for new, temporally available, README file. Stay tuned for things to come.
+# This is just placeholder. Stay tuned for things to come.
