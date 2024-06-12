@@ -29,3 +29,6 @@ storage/oauth-p*.key
 
 # Material
 app/Domain/User/Material
+
+# User\ng
+app/Domain/User/ng
