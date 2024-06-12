@@ -1,24 +1,19 @@
 <?php
-
 namespace Coyote\Events;
-
-use Coyote\Post\Comment;
-use Illuminate\Queue\SerializesModels;
 
 class CommentDeleted
 {
-    use SerializesModels;
-
     /**
      * @var array
      */
-    public $comment;
+    public $comment_arr = array();
 
     /**
-     * @param Comment $comment
+     *
      */
-    public function __construct(Comment $comment)
+    public function __construct(public $comment)
     {
-        $this->comment = array_only($comment->toArray(), ['id']);
+        //$this->comment = array_only($comment->toArray(), ['id']);
+        $this->comment = array_splice($this->comment_arr, 'id', null, null);
     }
 }
