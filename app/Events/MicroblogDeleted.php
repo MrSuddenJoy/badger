@@ -3,11 +3,11 @@
 namespace Coyote\Events;
 
 use Coyote\Microblog;
-use Illuminate\Queue\SerializesModels;
+
 
 class MicroblogDeleted
 {
-    use SerializesModels;
+    
 
     /**
      * @var array

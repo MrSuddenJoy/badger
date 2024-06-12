@@ -7,7 +7,7 @@ use Coyote\Microblog;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Foundation\Events\Dispatchable;
-use Illuminate\Queue\SerializesModels;
+
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 
 class MicroblogSaved implements ShouldBroadcast

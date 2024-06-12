@@ -3,11 +3,11 @@
 namespace Coyote\Events;
 
 use Coyote\Guide;
-use Illuminate\Queue\SerializesModels;
+
 
 class GuideDeleted
 {
-    use SerializesModels;
+    
 
     public array $guide;
 

@@ -3,11 +3,11 @@
 namespace Coyote\Events;
 
 use Coyote\Services\Stream\Activities\Activity;
-use Illuminate\Queue\SerializesModels;
+
 
 class StreamSaving
 {
-    use SerializesModels;
+    
 
     /**
      * @var Activity

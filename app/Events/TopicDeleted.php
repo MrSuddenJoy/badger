@@ -2,12 +2,12 @@
 
 namespace Coyote\Events;
 
-use Illuminate\Queue\SerializesModels;
+
 use Coyote\Topic;
 
 class TopicDeleted
 {
-    use SerializesModels;
+    
 
     /**
      * @var array

@@ -3,11 +3,11 @@
 namespace Coyote\Events;
 
 use Coyote\Topic;
-use Illuminate\Queue\SerializesModels;
+
 
 class TopicMoved
 {
-    use SerializesModels;
+    
 
     /**
      * @var Topic

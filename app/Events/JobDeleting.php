@@ -2,12 +2,12 @@
 
 namespace Coyote\Events;
 
-use Illuminate\Queue\SerializesModels;
+
 use Coyote\Job;
 
 class JobDeleting
 {
-    use SerializesModels;
+    
 
     /**
      * @var Job

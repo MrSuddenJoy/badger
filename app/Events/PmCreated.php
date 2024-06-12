@@ -5,7 +5,7 @@ namespace Coyote\Events;
 use Coyote\Http\Resources\PmResource;
 use Coyote\Pm;
 use Illuminate\Broadcasting\Channel;
-use Illuminate\Queue\SerializesModels;
+
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;

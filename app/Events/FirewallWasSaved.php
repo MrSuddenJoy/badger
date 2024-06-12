@@ -3,11 +3,11 @@
 namespace Coyote\Events;
 
 use Coyote\Firewall;
-use Illuminate\Queue\SerializesModels;
+
 
 class FirewallWasSaved
 {
-    use SerializesModels;
+    
 
     /**
      * @var Firewall

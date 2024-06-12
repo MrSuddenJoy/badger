@@ -3,11 +3,11 @@
 namespace Coyote\Events;
 
 use Coyote\Wiki;
-use Illuminate\Queue\SerializesModels;
+
 
 class WikiSaved
 {
-    use SerializesModels;
+    
 
     /**
      * @var Wiki

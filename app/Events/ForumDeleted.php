@@ -2,12 +2,12 @@
 
 namespace Coyote\Events;
 
-use Illuminate\Queue\SerializesModels;
+
 use Coyote\Forum;
 
 class ForumDeleted
 {
-    use SerializesModels;
+    
 
     /**
      * @var array

@@ -7,7 +7,7 @@ use Coyote\Post\Comment;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
-use Illuminate\Queue\SerializesModels;
+
 
 class CommentSaved implements ShouldBroadcast
 {
@@ -30,7 +30,7 @@ class CommentSaved implements ShouldBroadcast
     public function __construct(Comment $comment)
     {
         $this->comment = $comment;
-        $this->wasRecentlyCreated = $comment->wasRecentlyCreated;
+        $this->wasRecentlyCreated;
     }
 
     /**

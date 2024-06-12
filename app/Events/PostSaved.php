@@ -7,7 +7,7 @@ use Coyote\Post;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
-use Illuminate\Queue\SerializesModels;
+
 
 class PostSaved extends BroadcastEvent implements ShouldBroadcast
 {

@@ -3,11 +3,11 @@
 namespace Coyote\Events;
 
 use Coyote\Payment;
-use Illuminate\Queue\SerializesModels;
+
 
 class PaymentPaid
 {
-    use SerializesModels;
+    
 
     /**
      * @var Payment

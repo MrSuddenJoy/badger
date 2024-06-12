@@ -3,7 +3,7 @@
 namespace Coyote\Events;
 
 use Coyote\Stream;
-use Illuminate\Queue\SerializesModels;
+
 use Illuminate\Foundation\Events\Dispatchable;
 
 class StreamSaved

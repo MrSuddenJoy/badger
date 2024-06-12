@@ -4,7 +4,7 @@ namespace Coyote\Events;
 
 use Coyote\Guide;
 use Illuminate\Broadcasting\InteractsWithSockets;
-use Illuminate\Queue\SerializesModels;
+
 
 class GuideSaved
 {

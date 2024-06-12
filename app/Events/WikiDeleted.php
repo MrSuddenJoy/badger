@@ -2,12 +2,12 @@
 
 namespace Coyote\Events;
 
-use Illuminate\Queue\SerializesModels;
+
 use Coyote\Wiki;
 
 class WikiDeleted
 {
-    use SerializesModels;
+    
 
     /**
      * @var array

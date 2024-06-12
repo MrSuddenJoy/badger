@@ -2,11 +2,11 @@
 
 namespace Coyote\Events;
 
-use Illuminate\Queue\SerializesModels;
+
 
 class UserSaved
 {
-    use SerializesModels;
+    
 
     public $user;
 

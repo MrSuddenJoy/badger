@@ -3,11 +3,11 @@
 namespace Coyote\Events;
 
 use Coyote\Forum;
-use Illuminate\Queue\SerializesModels;
+
 
 class ForumSaved
 {
-    use SerializesModels;
+    
 
     /**
      * @var Forum

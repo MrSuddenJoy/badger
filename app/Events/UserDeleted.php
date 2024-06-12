@@ -3,7 +3,7 @@
 namespace Coyote\Events;
 
 use Coyote\User;
-use Illuminate\Queue\SerializesModels;
+
 use Illuminate\Foundation\Events\Dispatchable;
 
 class UserDeleted

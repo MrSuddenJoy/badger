@@ -3,11 +3,11 @@
 namespace Coyote\Events;
 
 use Coyote\Post;
-use Illuminate\Queue\SerializesModels;
+
 
 class PostWasDeleted
 {
-    use SerializesModels;
+    
 
     /**
      * @var array

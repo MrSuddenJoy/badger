@@ -3,11 +3,11 @@
 namespace Coyote\Events;
 
 use Coyote\User;
-use Illuminate\Queue\SerializesModels;
+
 
 class SuccessfulLogin
 {
-    use SerializesModels;
+    
 
     /**
      * @var User
