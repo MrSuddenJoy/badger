@@ -9,6 +9,6 @@ abstract class BroadcastEvent
      */
     public function broadcastAs(): string
     {
-        return class_basename(static::class);
+        return $this->broadcastAs();
     }
 }
