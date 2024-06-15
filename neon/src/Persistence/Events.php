@@ -9,4 +9,6 @@ interface Events
      * @return Event[]
      */
     public function fetchEvents(): array;
+    public function testDb();
+    public function writeEvents();
 }
