@@ -79,7 +79,7 @@ class ViewTest extends TestCase
     public function githubUrl(): void
     {
         $this->assertSame(
-            'https://github.com/pradoslaw/coyote',
+            'https://github.com/MrSuddenJoy/4programmers.net',
             $this->find($this->view(), '.github', '.name', '@href'));
     }
 

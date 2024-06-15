@@ -1,7 +1,7 @@
 <template>
   <div class="github-button">
     <a :class="['repository', this.size, this.theme]"
-       href="https://github.com/pradoslaw/coyote"
+       href="https://github.com/MrSuddenJoy/4programmers.net"
        title="Odwiedź repozytorium Coyote"
        rel="noopener,nofollow"
        target="_blank">
@@ -12,7 +12,7 @@
       <span>Coyote</span>
     </a>
     <a :class="['stars', this.size, this.theme]"
-       href="https://github.com/pradoslaw/coyote/stargazers"
+       href="https://github.com/MrSuddenJoy/4programmers.net/stargazers"
        rel="noopener,nofollow" target="_blank">
       {{ stars || '?' }}
     </a>
@@ -49,7 +49,7 @@ export default {
  This style is only working, because we
  initialize outside of router. Inside router
  for some unknown reasons, <style> in .vue files
- doesn't work. 
+ doesn't work.
 -->
 <style lang="scss">
 .github-button {

@@ -22,7 +22,7 @@ class Organization implements Thing
             'sameAs'   => [
                 'https://www.facebook.com/4programmers.net/',
                 'https://www.linkedin.com/company/4programmers/about/',
-                'https://github.com/pradoslaw/coyote',
+                'https://github.com/MrSuddenJoy/4programmers.net',
             ],
         ];
     }

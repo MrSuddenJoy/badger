@@ -69,8 +69,8 @@ readonly class View
                 $this->lang->t('Wiki')       => '/Kategorie',
                 $this->lang->t('Events')     => '/events',
             ],
-            'https://github.com/pradoslaw/coyote',
-            'https://github.com/pradoslaw/coyote/stargazers',
+            'https://github.com/MrSuddenJoy/4programmers.net',
+            'https://github.com/MrSuddenJoy/4programmers.net/stargazers',
             'Coyote',
             '112',
             [
