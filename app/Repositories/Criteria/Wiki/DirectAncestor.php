@@ -20,11 +20,9 @@ class DirectAncestor extends Criteria
         $this->parentId = $parentId;
     }
 
-    /**
-     * @param \Illuminate\Database\Eloquent\Builder $model
-     * @param Repository $repository
-     * @return mixed
-     */
+    /**
+     * @author: @MrSuddenJoy
+     */
     public function apply($model, Repository $repository)
     {
         return $model->where('parent_id', $this->parentId);
