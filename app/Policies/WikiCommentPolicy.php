@@ -8,7 +8,7 @@ use Coyote\Wiki\Comment;
 
 class WikiCommentPolicy
 {
-    use HandlesAuthorization;
+    // Think of sth that can be used here (in `use` directive)
 
     /**
      * @param User $user

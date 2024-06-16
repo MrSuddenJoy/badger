@@ -9,7 +9,7 @@ use Coyote\Post\Comment;
 
 class PostCommentPolicy
 {
-    use HandlesAuthorization;
+    // Think of sth that can be used here (in `use` directive)
 
     /**
      * @param string $ability
