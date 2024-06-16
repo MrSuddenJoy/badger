@@ -5,7 +5,7 @@ namespace Coyote\Providers;
 use Illuminate\Support\ServiceProvider;
 use Coyote\Services\Media\Factory;
 
-class MediaServiceProvider extends ServiceProvider
+class MediaServiceProvider extends \Coyote\Providers\Neon\ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.

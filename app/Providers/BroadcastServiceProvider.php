@@ -5,7 +5,7 @@ namespace Coyote\Providers;
 use Illuminate\Support\ServiceProvider;
 use \Illuminate\Contracts\Broadcasting\Factory;
 
-class BroadcastServiceProvider extends ServiceProvider
+class BroadcastServiceProvider extends \Coyote\Providers\Neon\ServiceProvider
 {
     /**
      * Bootstrap any application services.

@@ -28,7 +28,7 @@ use Illuminate\Cache\CacheManager;
 use Illuminate\Contracts\Auth\Access\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
-class AuthServiceProvider extends ServiceProvider
+class AuthServiceProvider extends \Coyote\Providers\Neon\ServiceProvider
 {
     // cache permission for 1 month
     const CACHE_TTL = 60 * 60 * 24 * 30;

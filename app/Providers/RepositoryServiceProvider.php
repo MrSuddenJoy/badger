@@ -7,7 +7,7 @@ use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Foundation\Application;
 
-class RepositoryServiceProvider extends ServiceProvider
+class RepositoryServiceProvider extends \Coyote\Providers\Neon\ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.

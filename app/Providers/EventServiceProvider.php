@@ -36,7 +36,7 @@ use Illuminate\Auth\Events\Login;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Mail\Events\MessageSending;
 
-class EventServiceProvider extends ServiceProvider
+class EventServiceProvider extends \Coyote\Providers\Neon\ServiceProvider
 {
     /**
      * The event handler mappings for the application.
