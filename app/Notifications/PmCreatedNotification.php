@@ -6,13 +6,11 @@ use Coyote\User;
 use Coyote\Pm;
 use Coyote\Services\Notification\Notification;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\BroadcastMessage;
 use Illuminate\Notifications\Messages\MailMessage;
 use NotificationChannels\WebPush\WebPushMessage;
 
-class PmCreatedNotification extends Notification implements ShouldQueue, ShouldBroadcast
+class PmCreatedNotification extends Notification
 {
     use Queueable;
 

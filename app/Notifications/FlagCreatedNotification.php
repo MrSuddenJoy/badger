@@ -7,14 +7,12 @@ use Coyote\Services\Notification\DatabaseChannel;
 use Coyote\Services\Notification\Notification;
 use Coyote\User;
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Channels\BroadcastChannel;
 use Illuminate\Notifications\Messages\BroadcastMessage;
 use NotificationChannels\WebPush\WebPushChannel;
 use NotificationChannels\WebPush\WebPushMessage;
 
-class FlagCreatedNotification extends Notification implements ShouldQueue, ShouldBroadcast
+class FlagCreatedNotification extends Notification
 {
     use Queueable;
 
