@@ -11,9 +11,9 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 use Illuminate\Notifications\Messages\BroadcastMessage;
 use NotificationChannels\WebPush\WebPushMessage;
 
-abstract class AbstractNotification extends Notification implements ShouldBroadcastNow
+abstract class AbstractNotification extends \Coyote\Notification implements ShouldBroadcastNow
 {
-    use Queueable;
+    // use Queueable;
 
     /**
      * Indicate if the job should be deleted when models are missing.

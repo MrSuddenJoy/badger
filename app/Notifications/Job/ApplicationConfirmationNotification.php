@@ -3,14 +3,14 @@
 namespace Coyote\Notifications\Job;
 
 use Coyote\Job\Application;
-use Illuminate\Bus\Queueable;
-use Illuminate\Notifications\Notification;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class ApplicationConfirmationNotification extends Notification implements ShouldQueue
+/**
+ * @return mixed
+ */
+class ApplicationConfirmationNotification extends \Coyote\Notification
 {
-    use Queueable;
+    // use Queueable;
 
     /**
      * Get the notification's delivery channels.

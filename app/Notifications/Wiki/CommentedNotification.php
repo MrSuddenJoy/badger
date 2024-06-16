@@ -13,9 +13,9 @@ use Illuminate\Notifications\Messages\BroadcastMessage;
 use Illuminate\Notifications\Messages\MailMessage;
 use NotificationChannels\WebPush\WebPushMessage;
 
-class CommentedNotification extends Notification implements ShouldQueue, ShouldBroadcast
+class CommentedNotification extends \Coyote\Notification implements ShouldQueue, ShouldBroadcast
 {
-    use Queueable;
+    // use Queueable;
 
     const ID = \Coyote\Notification::WIKI_COMMENT;
 

@@ -8,9 +8,9 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
-class RepliedNotification extends Notification
+class RepliedNotification extends \Coyote\Notification
 {
-    use Queueable;
+    // use Queueable;
 
     public function __construct(private Comment $comment)
     {

@@ -13,9 +13,9 @@ use Illuminate\Notifications\Messages\BroadcastMessage;
 use Illuminate\Notifications\Messages\MailMessage;
 use NotificationChannels\WebPush\WebPushMessage;
 
-class ContentChangedNotification extends Notification implements ShouldBroadcast, ShouldQueue
+class ContentChangedNotification extends \Coyote\Notification implements ShouldBroadcast, ShouldQueue
 {
-    use Queueable;
+    // use Queueable;
 
     const ID = \Coyote\Notification::WIKI_SUBSCRIBER;
 

@@ -10,9 +10,9 @@ use Illuminate\Notifications\Messages\BroadcastMessage;
 use Illuminate\Notifications\Messages\MailMessage;
 use NotificationChannels\WebPush\WebPushMessage;
 
-class PmCreatedNotification extends Notification
+class PmCreatedNotification extends \Coyote\Notification
 {
-    use Queueable;
+    // use Queueable;
 
     const ID = \Coyote\Notification::PM;
 
