@@ -3,7 +3,7 @@
 namespace Coyote\Policies;
 
 use Coyote\Reputation;
-use Illuminate\Auth\Access\HandlesAuthorization;
+
 use Coyote\User;
 use Coyote\Post;
 

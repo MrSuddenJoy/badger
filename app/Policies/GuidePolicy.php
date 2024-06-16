@@ -4,7 +4,7 @@ namespace Coyote\Policies;
 
 use Coyote\Guide;
 use Coyote\User;
-use Illuminate\Auth\Access\HandlesAuthorization;
+
 
 class GuidePolicy
 {

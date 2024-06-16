@@ -4,7 +4,7 @@ namespace Coyote\Policies;
 
 use Coyote\Microblog;
 use Coyote\User;
-use Illuminate\Auth\Access\HandlesAuthorization;
+
 
 class MicroblogPolicy
 {
