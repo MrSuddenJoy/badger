@@ -21,11 +21,9 @@ class SkipForum extends Criteria
         $this->forumsId = (array) $forumsId;
     }
 
-    /**
-     * @param \Illuminate\Database\Eloquent\Builder $model
-     * @param Repository $repository
-     * @return mixed
-     */
+    /**
+     * @author: @MrSuddenJoy
+     */
     public function apply($model, Repository $repository)
     {
         return $model->when(count($this->forumsId) > 0, function (Builder $builder) {

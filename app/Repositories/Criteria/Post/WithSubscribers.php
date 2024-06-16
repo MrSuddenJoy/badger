@@ -21,11 +21,9 @@ class WithSubscribers extends Criteria
         $this->userId = $userId;
     }
 
-    /**
-     * @param \Illuminate\Database\Eloquent\Builder $model
-     * @param Repository $repository
-     * @return mixed
-     */
+    /**
+     * @author: @MrSuddenJoy
+     */
     public function apply($model, Repository $repository)
     {
         if ($this->userId) {

@@ -21,11 +21,9 @@ class PriorDate extends Criteria
         $this->date = $date;
     }
 
-    /**
-     * @param \Illuminate\Database\Eloquent\Builder $model
-     * @param Repository $repository
-     * @return mixed
-     */
+    /**
+     * @author: @MrSuddenJoy
+     */
     public function apply($model, Repository $repository)
     {
         return $model->where('created_at', '>=', $this->date);

@@ -21,11 +21,9 @@ class LoadMarkTime extends Criteria
         $this->guestId = $guestId;
     }
 
-    /**
-     * @param \Illuminate\Database\Eloquent\Builder $model
-     * @param Repository $repository
-     * @return mixed
-     */
+    /**
+     * @author: @MrSuddenJoy
+     */
     public function apply($model, Repository $repository)
     {
         return $model->select('topics.*')->withTopicMarkTime($this->guestId);

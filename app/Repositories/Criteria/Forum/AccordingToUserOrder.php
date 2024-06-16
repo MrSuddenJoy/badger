@@ -28,11 +28,9 @@ class AccordingToUserOrder extends Criteria
         $this->ignoreHidden = $ignoreHidden;
     }
 
-    /**
-     * @param \Illuminate\Database\Eloquent\Builder $model
-     * @param Repository $repository
-     * @return mixed
-     */
+    /**
+     * @author: @MrSuddenJoy
+     */
     public function apply($model, Repository $repository)
     {
         if ($this->userId !== null) {
