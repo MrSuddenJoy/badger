@@ -3,7 +3,6 @@
 namespace Coyote\Repositories\Criteria;
 
 use Coyote\Repositories\Contracts\RepositoryInterface as Repository;
-use Coyote\Topic;
 use Illuminate\Database\Query\Builder;
 
 class WithTags extends Criteria
