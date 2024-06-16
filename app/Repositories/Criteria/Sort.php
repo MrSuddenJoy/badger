@@ -29,11 +29,6 @@ class Sort extends Criteria
         $this->order = $order;
     }
 
-    /**
-     * @param \Illuminate\Database\Eloquent\Builder $model
-     * @param Repository $repository
-     * @return \Illuminate\Database\Eloquent\Builder
-     */
     public function apply($model, Repository $repository)
     {
         return $model->orderBy($this->sort, $this->order);

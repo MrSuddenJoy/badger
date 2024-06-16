@@ -19,11 +19,6 @@ class EagerLoadingWithCount extends Criteria
         $this->relations = $relations;
     }
 
-    /**
-     * @param \Illuminate\Database\Eloquent\Builder $model
-     * @param Repository $repository
-     * @return \Illuminate\Database\Eloquent\Builder
-     */
     public function apply($model, Repository $repository)
     {
         return $model->withCount($this->relations);

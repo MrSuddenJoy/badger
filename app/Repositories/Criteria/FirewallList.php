@@ -6,11 +6,6 @@ use Coyote\Repositories\Contracts\RepositoryInterface as Repository;
 
 class FirewallList extends Criteria
 {
-    /**
-     * @param \Illuminate\Database\Eloquent\Builder $model
-     * @param Repository $repository
-     * @return mixed
-     */
     public function apply($model, Repository $repository)
     {
         return $model
