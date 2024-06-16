@@ -8,7 +8,6 @@ use Coyote\Repositories\Criteria\Criteria;
 class BelowDepth extends Criteria
 {
     /**
-     * @param \Illuminate\Database\Eloquent\Builder $model
      * @param Repository $repository
      * @return mixed
      */
