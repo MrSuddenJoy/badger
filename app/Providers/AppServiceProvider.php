@@ -22,7 +22,7 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Routing\Events\RouteMatched;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Collection;
-use Illuminate\Support\ServiceProvider;
+//
 use Illuminate\Support\Str;
 
 class AppServiceProvider extends \Coyote\Providers\Neon\ServiceProvider

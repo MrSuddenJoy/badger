@@ -5,7 +5,7 @@ use Coyote\Domain\Seo\Schema;
 use Coyote\View\Twig\TwigLiteral;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
-use Illuminate\Support\ServiceProvider;
+//
 use Illuminate\View\Factory;
 
 class SeoServiceProvider extends \Coyote\Providers\Neon\ServiceProvider

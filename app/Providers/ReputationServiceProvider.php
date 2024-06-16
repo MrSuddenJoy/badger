@@ -2,7 +2,7 @@
 
 namespace Coyote\Providers;
 
-use Illuminate\Support\ServiceProvider;
+//
 use Coyote\Repositories\Contracts\ReputationRepositoryInterface;
 
 class ReputationServiceProvider extends \Coyote\Providers\Neon\ServiceProvider
