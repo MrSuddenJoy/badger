@@ -43,4 +43,20 @@ class StaticEvents implements Events
             ),
         ];
     }
+
+    public function setUpDb(){
+      //
+    }
+
+    public function testDb(){
+      //
+    }
+
+    public function writeEvents(){
+      //
+    }
+
+    public function readEvents(){
+      //
+    }
 }
