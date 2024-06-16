@@ -33,7 +33,7 @@ use Coyote\Listeners\TopicListener;
 use Coyote\Listeners\JobListener;
 use Illuminate\Auth\Events\Lockout;
 use Illuminate\Auth\Events\Login;
-use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+//
 use Illuminate\Mail\Events\MessageSending;
 
 class EventServiceProvider extends \Coyote\Providers\Neon\ServiceProvider

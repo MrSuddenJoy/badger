@@ -8,7 +8,7 @@ use Coyote\User;
 
 class ForumPolicy
 {
-    use HandlesAuthorization;
+    // Think of sth that can be used here (in `use` directive)
 
     /**
      * @param User|null $user

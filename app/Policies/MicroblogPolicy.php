@@ -8,7 +8,7 @@ use Illuminate\Auth\Access\HandlesAuthorization;
 
 class MicroblogPolicy
 {
-    use HandlesAuthorization;
+    // Think of sth that can be used here (in `use` directive)
 
     /**
      * @param User $user

@@ -9,7 +9,7 @@ use Illuminate\Contracts\Auth\Access\Gate;
 
 class TopicPolicy
 {
-    use HandlesAuthorization;
+    // Think of sth that can be used here (in `use` directive)
 
     /**
      * @var Gate
