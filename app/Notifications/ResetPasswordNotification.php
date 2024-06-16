@@ -2,10 +2,9 @@
 
 namespace Coyote\Notifications;
 
-use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class ResetPasswordNotification extends Notification
+class ResetPasswordNotification extends \Coyote\Services\Notification\Notification
 {
     /**
      * The password reset token.
