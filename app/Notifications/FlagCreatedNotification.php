@@ -12,9 +12,9 @@ use Illuminate\Notifications\Messages\BroadcastMessage;
 use NotificationChannels\WebPush\WebPushChannel;
 use NotificationChannels\WebPush\WebPushMessage;
 
-class FlagCreatedNotification extends Notification
+class FlagCreatedNotification extends \Coyote\Notification
 {
-    use Queueable;
+    // use Queueable;
 
     const ID = \Coyote\Notification::FLAG;
 

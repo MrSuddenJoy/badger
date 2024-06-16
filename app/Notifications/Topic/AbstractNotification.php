@@ -12,9 +12,9 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\BroadcastMessage;
 use NotificationChannels\WebPush\WebPushMessage;
 
-abstract class AbstractNotification extends Notification implements ShouldQueue, ShouldBroadcast
+abstract class AbstractNotification extends \Coyote\Notification implements ShouldQueue, ShouldBroadcast
 {
-    use Queueable;
+    // use Queueable;
 
     /**
      * @var Topic

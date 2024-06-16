@@ -12,9 +12,9 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Facades\Storage;
 
-class ApplicationSentNotification extends Notification implements ShouldQueue, NotificationInterface
+class ApplicationSentNotification extends \Coyote\Notification implements ShouldQueue, NotificationInterface
 {
-    use Queueable;
+    // use Queueable;
 
     const ID = \Coyote\Notification::JOB_APPLICATION;
 

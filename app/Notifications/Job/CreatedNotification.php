@@ -13,9 +13,8 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Coyote\Services\Notification\DatabaseChannel;
 
-class CreatedNotification extends Notification implements ShouldQueue
-{
-    use Queueable;
+class CreatedNotification extends \Coyote\Notification
+    // use Queueable;
 
     const ID = \Coyote\Notification::JOB_CREATE;
 
