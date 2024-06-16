@@ -4,7 +4,7 @@ namespace Coyote\Providers;
 
 use Coyote\Services\Geocoder\Geocoder;
 use Coyote\Services\Geocoder\GeocoderInterface;
-use Illuminate\Support\ServiceProvider;
+//
 use GuzzleHttp\Client;
 
 class GeocoderServiceProvider extends \Coyote\Providers\Neon\ServiceProvider

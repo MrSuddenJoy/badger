@@ -6,7 +6,7 @@ use Coyote\Repositories\Contracts\SessionRepositoryInterface;
 use Coyote\Services\Session\Registered;
 use Illuminate\Database\Connection;
 use Illuminate\Http\Request;
-use Illuminate\Support\ServiceProvider;
+//
 use Coyote\Services\Session\Renderer;
 use Coyote\Services\Session\Handler;
 

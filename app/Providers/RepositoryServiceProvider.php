@@ -4,7 +4,7 @@ namespace Coyote\Providers;
 
 use Coyote\Repositories\Contracts\SessionRepositoryInterface;
 use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\ServiceProvider;
+//
 use Illuminate\Contracts\Foundation\Application;
 
 class RepositoryServiceProvider extends \Coyote\Providers\Neon\ServiceProvider

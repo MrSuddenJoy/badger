@@ -5,7 +5,7 @@ namespace Coyote\Providers;
 use Coyote\Services\GeoIp\Cache;
 use Coyote\Services\GeoIp\GeoIp;
 use GuzzleHttp\Client;
-use Illuminate\Support\ServiceProvider;
+//
 use Illuminate\Contracts\Cache\Repository;
 
 class GeoIpServiceProvider extends \Coyote\Providers\Neon\ServiceProvider

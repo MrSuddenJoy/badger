@@ -4,7 +4,7 @@ namespace Coyote\Providers;
 
 use Coyote\Services\Elasticsearch\QueryBuilder;
 use Coyote\Services\Elasticsearch\QueryBuilderInterface;
-use Illuminate\Support\ServiceProvider;
+//
 use Elasticsearch\ClientBuilder;
 
 class ElasticsearchServiceProvider extends \Coyote\Providers\Neon\ServiceProvider
