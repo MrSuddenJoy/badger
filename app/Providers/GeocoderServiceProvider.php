@@ -7,7 +7,7 @@ use Coyote\Services\Geocoder\GeocoderInterface;
 use Illuminate\Support\ServiceProvider;
 use GuzzleHttp\Client;
 
-class GeocoderServiceProvider extends ServiceProvider
+class GeocoderServiceProvider extends \Coyote\Providers\Neon\ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.

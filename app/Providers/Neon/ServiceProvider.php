@@ -2,7 +2,6 @@
 namespace Coyote\Providers\Neon;
 
 use Illuminate\Database\DatabaseManager;
-use Illuminate\Foundation\Support\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Session\Middleware\StartSession;
@@ -13,7 +12,7 @@ use Neon\Laravel\LaravelVisitor;
 use Neon\Persistence;
 use Neon\StaticEvents;
 
-class ServiceProvider extends RouteServiceProvider
+class ServiceProvider extends \Coyote\Providers\RouteServiceProvider
 {
     public function register(): void
     {

@@ -10,7 +10,7 @@ use Coyote\Services\Parser\Factories\PostFactory;
 use Coyote\Services\Parser\Factories\CommentFactory;
 use Coyote\Services\Parser\Factories\JobFactory;
 
-class ParserServiceProvider extends ServiceProvider
+class ParserServiceProvider extends \Coyote\Providers\Neon\ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.

@@ -25,7 +25,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 
-class AppServiceProvider extends ServiceProvider
+class AppServiceProvider extends \Coyote\Providers\Neon\ServiceProvider
 {
     /**
      * Bootstrap any application services.

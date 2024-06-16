@@ -5,7 +5,7 @@ namespace Coyote\Providers;
 use Coyote\Services\Sitemap\Sitemap;
 use Illuminate\Support\ServiceProvider;
 
-class SitemapProvider extends ServiceProvider
+class SitemapProvider extends \Coyote\Providers\Neon\ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.

@@ -10,7 +10,7 @@ use Illuminate\Support\ServiceProvider;
 use Coyote\Services\Session\Renderer;
 use Coyote\Services\Session\Handler;
 
-class SessionServiceProvider extends ServiceProvider
+class SessionServiceProvider extends \Coyote\Providers\Neon\ServiceProvider
 {
     /**
      * Register the application services.

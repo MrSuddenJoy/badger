@@ -22,7 +22,7 @@ use Coyote\User;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Routing\Router;
 
-class RouteServiceProvider extends ServiceProvider
+class RouteServiceProvider extends \Coyote\Providers\Neon\ServiceProvider
 {
     /**
      * This namespace is applied to the controller routes in your routes file.

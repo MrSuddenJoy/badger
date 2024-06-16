@@ -2,10 +2,9 @@
 
 namespace Coyote\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Carbon\Carbon;
 
-class ConfigServiceProvider extends ServiceProvider
+class ConfigServiceProvider extends \Coyote\Providers\Neon\ServiceProvider
 {
     /**
      * Overwrite any vendor / package configuration.

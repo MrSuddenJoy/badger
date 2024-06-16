@@ -8,7 +8,7 @@ use GuzzleHttp\Client;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Contracts\Cache\Repository;
 
-class GeoIpServiceProvider extends ServiceProvider
+class GeoIpServiceProvider extends \Coyote\Providers\Neon\ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.

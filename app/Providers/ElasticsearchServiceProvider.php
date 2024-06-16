@@ -7,7 +7,7 @@ use Coyote\Services\Elasticsearch\QueryBuilderInterface;
 use Illuminate\Support\ServiceProvider;
 use Elasticsearch\ClientBuilder;
 
-class ElasticsearchServiceProvider extends ServiceProvider
+class ElasticsearchServiceProvider extends \Coyote\Providers\Neon\ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.

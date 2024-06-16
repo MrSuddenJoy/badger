@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\View\Factory;
 
-class SeoServiceProvider extends ServiceProvider
+class SeoServiceProvider extends \Coyote\Providers\Neon\ServiceProvider
 {
     public function boot(): void
     {

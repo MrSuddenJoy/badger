@@ -19,7 +19,7 @@ use Illuminate\View\Factory;
 use Lavary\Menu\Builder;
 use Lavary\Menu\Menu;
 
-class ViewServiceProvider extends ServiceProvider
+class ViewServiceProvider extends \Coyote\Providers\Neon\ServiceProvider
 {
     use CacheFactory;
 
