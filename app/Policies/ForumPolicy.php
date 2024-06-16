@@ -2,7 +2,7 @@
 
 namespace Coyote\Policies;
 
-use Illuminate\Auth\Access\HandlesAuthorization;
+
 use Coyote\Forum;
 use Coyote\User;
 

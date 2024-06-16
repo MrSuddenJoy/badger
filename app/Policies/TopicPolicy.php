@@ -4,7 +4,7 @@ namespace Coyote\Policies;
 
 use Coyote\Topic;
 use Coyote\User;
-use Illuminate\Auth\Access\HandlesAuthorization;
+
 use Illuminate\Contracts\Auth\Access\Gate;
 
 class TopicPolicy
