@@ -13,5 +13,5 @@ name = "javascript"
   ]
 
 test_patterns = \[  
-  "resources/\*\*"
+  "resources/**/*"
 ]
