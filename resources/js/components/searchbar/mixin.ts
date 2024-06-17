@@ -17,7 +17,7 @@ export default class DecoratorMixin extends Vue {
     // @ts-ignore
     const value = this.value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
-    const ascii = value.normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+    const ascii = value.normalize('NFD').replace(/[\u0300-\u036f]/gu, "");
     const re = new RegExp(`\\b(${value}|${ascii})`, "i");
 
     return text.replace(re, "<strong>$1</strong>");
