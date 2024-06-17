@@ -111,12 +111,12 @@
     }
   })
   export default class VueSearchbar extends Vue {
-    isActive: boolean = false;
-    isDropdownVisible: boolean = false;
-    isHelpEnabled: boolean = false;
-    isMobile: boolean = false;
+    isActive = false;
+    isDropdownVisible = false;
+    isHelpEnabled = false;
+    isMobile = false;
     items: Hit[] = [];
-    selectedIndex: number = -1;
+    selectedIndex = -1;
     params?: URLSearchParams;
 
     readonly isAuthorized! : boolean;

@@ -100,7 +100,7 @@
     @InjectReactive({from: 'popularTags', default: []})
     readonly popularTags!: Tag[];
 
-    private searchText: string = '';
+    private searchText = '';
     private filteredTags = [];
 
     @Watch('searchText')
