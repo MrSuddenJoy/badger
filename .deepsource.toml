@@ -11,3 +11,7 @@ name = "javascript"
     "mocha",
     "nodejs"
   ]
+
+test_patterns = \[  
+  "resources/\*\*"
+]
