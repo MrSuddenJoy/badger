@@ -23,7 +23,7 @@ class Currency extends \Tests\Legacy\Services\Model
     public $timestamps = false;
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function exchanges()
     {

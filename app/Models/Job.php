@@ -306,7 +306,7 @@ class Job extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function referers()
     {
@@ -338,7 +338,7 @@ class Job extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function applications()
     {
@@ -346,7 +346,7 @@ class Job extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function refers()
     {
@@ -362,7 +362,7 @@ class Job extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function payments()
     {
@@ -386,7 +386,7 @@ class Job extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      * @todo duplikat z modelem Guide.php
      */
     public function commentsWithChildren()
