@@ -1,7 +1,7 @@
 version = 1
 
 test_patterns = [  
-  "/resources/js/tests/store/modules/posts.spec.ts"
+  "/resources/js/tests/**/*"
 ]
 
 [[analyzers]]
