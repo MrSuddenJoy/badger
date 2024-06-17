@@ -136,9 +136,4 @@ class UserTargetCommand extends Command
             ->toArray();
         return \array_map([$this, 'cast'], $toArray);
     }
-
-    private function cast(\stdClass $object): array
-    {
-        return (array)$object;
-    }
 }

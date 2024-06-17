@@ -23,27 +23,6 @@ class Comment extends ObjectAbstract
         return $this;
     }
 
-    private function microblog(\Coyote\Microblog $microblog): void
-    {
-        $this->id = $microblog->id;
-        $this->url = UrlBuilder::microblogComment($microblog);
-        $this->displayName = excerpt($microblog->html, self::EXCERPT_SIZE);
-    }
-
-    private function post(\Coyote\Post $post, \Coyote\Post\Comment $comment, \Coyote\Topic $topic): void
-    {
-        $this->id = $comment->id;
-        $this->displayName = excerpt($comment->html, self::EXCERPT_SIZE);
-        $this->url = UrlBuilder::topic($topic) . '?p=' . $post->id . '#comment-' . $comment->id;
-    }
-
-    private function wiki(\Coyote\Wiki $wiki, \Coyote\Wiki\Comment $comment): void
-    {
-        $this->id = $comment->id;
-        $this->displayName = excerpt($comment->html, self::EXCERPT_SIZE);
-        $this->url = UrlBuilder::wikiComment($wiki, $comment->id);
-    }
-
     public function comment(\Coyote\Comment $comment)
     {
         $this->id = $comment->id;

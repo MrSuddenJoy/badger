@@ -18,13 +18,4 @@ class Range extends Filter implements DslInterface
     {
         parent::__construct($field, array_map([&$this, 'filterValue'], $value));
     }
-
-    /**
-     * @param mixed $value
-     * @return mixed
-     */
-    private function filterValue($value)
-    {
-        return trim(str_replace(' ', '', $value));
-    }
 }

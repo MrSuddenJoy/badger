@@ -29,17 +29,4 @@ class SpamValidatorTest extends TestCase
 
         $this->assertTrue($validator->validateSpamLink([], 'foo@bar.net', [1]));
     }
-
-    private function buildValidatorInstance($ip, $authorized = false)
-    {
-        $request = Mockery::mock(\Illuminate\Http\Request::class);
-        $request->shouldReceive('getClientHost')->andReturn(gethostbyaddr($ip));
-
-        app()->instance(\Illuminate\Http\Request::class, $request);
-
-        $auth = Mockery::mock(\Illuminate\Contracts\Auth\Guard::class);
-        $auth->shouldReceive('check')->andReturn($authorized);
-
-        return new \Coyote\Http\Validators\SpamValidator($auth, $request);
-    }
 }
