@@ -126,9 +126,9 @@
     }
 
     selectTag(event) {
-      // @ts-ignore
+      // @ts-expect-error
       if (this.dropdown.getSelected()) {
-        // @ts-ignore
+        // @ts-expect-error
         this.applyTag(this.dropdown.getSelected()['name']);
 
         event.preventDefault(); // prevent submitting the form
@@ -149,7 +149,7 @@
 
     private applyTag(name: string) {
       this.toggleTag({ name });
-      // @ts-ignore
+      // @ts-expect-error
       // hiding dropdown resets internal index of selected position. it's important because otherwise pressing enter would apply
       // last selected tag
       this.dropdown.hideDropdown();

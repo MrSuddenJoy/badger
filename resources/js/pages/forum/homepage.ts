@@ -39,7 +39,7 @@ export default Vue.extend({
         return false;
       }
 
-      // @ts-ignore
+      // @ts-expect-error
       return topic.tags.filter(tag => this.tagNames.includes(tag.name)).length > 0;
     }
   },

@@ -25,7 +25,7 @@ export class MicroblogMixin extends Vue {
     store.commit('microblogs/TOGGLE_EDIT', microblog);
 
     if (microblog.is_editing) {
-      // @ts-ignore
+      // @ts-expect-error
       this.$nextTick(() => this.form.markdown.focus());
       this.isWrapped = false;
     }

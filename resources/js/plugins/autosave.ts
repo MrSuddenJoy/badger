@@ -18,14 +18,14 @@ export const install = (Vue) => {
 
   Vue.prototype.$saveDraft = (key: string, value: string) => {
     try {
-      // @ts-ignore
+      // @ts-expect-error
       localStorage.setItem(key, JSON.stringify({
         'content': value,
         'timestamp': currentTime
       }));
     }
     catch (e) {
-      // @ts-ignore
+      // @ts-expect-error
       localStorage.clear();
     }
   };

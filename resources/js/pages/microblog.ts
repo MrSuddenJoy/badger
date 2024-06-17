@@ -62,7 +62,7 @@ new Vue({
   },
   mounted() {
     document.getElementById('js-skeleton')?.remove();
-    // @ts-ignore
+    // @ts-expect-error
     this.liveNotifications();
   },
   methods: {

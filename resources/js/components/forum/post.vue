@@ -403,7 +403,7 @@ export default class VuePost extends Vue {
     store.commit('posts/edit', this.post);
 
     if (this.post.is_editing) {
-      // @ts-ignore
+      // @ts-expect-error
       this.$nextTick(() => this.form.markdown.focus());
     }
   }
@@ -412,17 +412,17 @@ export default class VuePost extends Vue {
     this.isCommenting = !this.isCommenting;
 
     if (this.isCommenting) {
-      // @ts-ignore
+      // @ts-expect-error
       this.$nextTick(() => this.commentForm.focus());
     }
   }
 
   deletePost(confirm = false, reasonId: number | null = null) {
     if (confirm) {
-      // @ts-ignore
+      // @ts-expect-error
       this.deleteModal.open();
     } else {
-      // @ts-ignore
+      // @ts-expect-error
       this.deleteModal.close();
       store.dispatch('posts/delete', {post: this.post, reasonId}).then(() => this.isCollapsed = true);
     }
