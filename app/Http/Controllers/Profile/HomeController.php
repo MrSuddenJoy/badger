@@ -71,17 +71,6 @@ class HomeController extends Controller
         ]);
     }
 
-    private function reputation(User $user): View
-    {
-        return view('profile.partials.reputation', [
-            'user'        => $user,
-            'rank'        => $this->user->rank($user->id),
-            'total_users' => $this->user->countUsersWithReputation(),
-            'reputation'  => $this->reputation->history($user->id),
-            'chart'       => new TwigLiteral($this->chart($user)),
-        ]);
-    }
-
     private function chart(User $user): Chart
     {
         $chart = $this->reputation->chart($user->id);
@@ -91,40 +80,5 @@ class HomeController extends Controller
             ['#ff9f40'],
             'reputation-chart',
         );
-    }
-
-    private function post(User $user): View
-    {
-        $this->post->pushCriteria(new OnlyThoseWithAccess(auth()->user()));
-
-        $pieChart = $this->post->pieChart($user->id);
-
-        return view('profile.partials.posts', [
-            'user'                => $user,
-            'pie'                 => $pieChart,
-            'posts'               => array_sum($pieChart),
-            'line'                => $this->post->lineChart($user->id),
-            'comments'            => $this->post->countComments($user->id),
-            'given_votes'         => $this->post->countGivenVotes($user->id),
-            'received_votes'      => $this->post->countReceivedVotes($user->id),
-            'user_microblogs'     => Microblog::query()->where('user_id', $user->id)->count(),
-            'user_posts_accepted' => Post::query()
-                ->join('post_accepts', 'post_accepts.post_id', '=', 'posts.id')
-                ->join('users', 'users.id', '=', 'post_accepts.user_id')
-                ->where('posts.user_id', $user->id)
-                ->count(),
-        ]);
-    }
-
-    private function microblog(User $user): View
-    {
-        /** @var Builder $builder */
-        $builder = app(Builder::class);
-        $paginator = $builder->orderById()->onlyUsers($user)->paginate();
-        return view('profile.partials.microblog', [
-            'user'       => $user,
-            'pagination' => new MicroblogCollection($paginator),
-            'emojis'     => Emoji::all(),
-        ]);
     }
 }
