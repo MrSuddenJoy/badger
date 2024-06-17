@@ -3,7 +3,7 @@ import { Subscriber, MicroblogCommentSaved, MicroblogSaved, MicroblogVoted } fro
 export default {
   methods: {
     liveNotifications() {
-      const subscriber = new Subscriber(`microblog`);
+      const subscriber = new Subscriber("microblog");
 
       subscriber.subscribe('MicroblogSaved', new MicroblogSaved())
       subscriber.subscribe('MicroblogSaved', new MicroblogCommentSaved())

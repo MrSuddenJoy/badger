@@ -109,7 +109,7 @@ export class PostSaved implements Observer {
       const topic = store.getters['topics/topic'];
 
       getPost(payload.id).then(({ data }) => {
-        store.commit(`posts/add`, data);
+        store.commit("posts/add", data);
 
         Vue.nextTick(() => document.getElementById(`id${payload.id}`)!.addEventListener('mouseover', () => store.dispatch('topics/mark', topic), {once: true}))
       });
@@ -117,7 +117,7 @@ export class PostSaved implements Observer {
       return;
     }
 
-    store.commit(`posts/update`, payload);
+    store.commit("posts/update", payload);
   }
 }
 
