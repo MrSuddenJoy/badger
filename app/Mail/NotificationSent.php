@@ -2,15 +2,13 @@
 
 namespace Coyote\Mail;
 
-use Illuminate\Bus\Queueable;
+/* /** use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
-
-class NotificationSent extends Mailable implements ShouldQueue
+use Illuminate\Contracts\Queue\ShouldQueue; */
+ */
+class NotificationSent extends \Tests\Legacy\Services\Model
 {
-    use Queueable, SerializesModels;
-
     /**
      * @var string
      */

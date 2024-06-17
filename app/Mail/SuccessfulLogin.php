@@ -8,7 +8,7 @@ use Illuminate\Queue\SerializesModels;
 use \Coyote\Events\SuccessfulLogin as SuccessfulLoginEvent;
 use Jenssegers\Agent\Agent;
 
-class SuccessfulLogin extends Mailable
+class SuccessfulLogin extends \Tests\Legacy\Services\Model
 {
     use Queueable, SerializesModels;
 

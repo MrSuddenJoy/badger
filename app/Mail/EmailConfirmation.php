@@ -2,14 +2,8 @@
 
 namespace Coyote\Mail;
 
-use Illuminate\Bus\Queueable;
-use Illuminate\Mail\Mailable;
-use Illuminate\Queue\SerializesModels;
-
-class EmailConfirmation extends Mailable
+class EmailConfirmation extends \Tests\Legacy\Services\Model
 {
-    use Queueable, SerializesModels;
-
     /**
      * @param string $url
      */
