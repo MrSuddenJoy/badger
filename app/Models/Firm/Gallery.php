@@ -2,9 +2,7 @@
 
 namespace Coyote\Firm;
 
-use Coyote\Services\Media\SerializeClass;
 use Illuminate\Database\Eloquent\Model;
-use Coyote\Services\Media\Factory as MediaFactory;
 
 /**
  * @deprecated
