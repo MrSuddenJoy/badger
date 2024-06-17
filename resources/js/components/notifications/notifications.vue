@@ -80,7 +80,7 @@ function urlBase64ToUint8Array(base64String) {
     @Ref('scrollbar')
     scrollBar!: PerfectScrollbar;
 
-    title: string = '';
+    title = '';
     isOpen = false;
     count!: number;
     notifications!: null | Notification[];

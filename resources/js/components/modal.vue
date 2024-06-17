@@ -32,7 +32,7 @@ import Component from "vue-class-component";
 export default class VueModal extends Vue {
   isOpen = false;
 
-  private bodyOverflow: string = '';
+  private bodyOverflow = '';
 
   open() {
     this.isOpen = true;

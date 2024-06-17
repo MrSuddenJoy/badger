@@ -206,7 +206,7 @@
     @Prop()
     firms!: Firm[];
 
-    benefit: string = '';
+    benefit = '';
 
     changeAddress(e) {
       const val = e.target.value.trim();
