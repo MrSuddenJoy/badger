@@ -39,7 +39,7 @@ class Geocoder {
             let components = result[0].address_components;
 
             for (let item in components) {
-                if (components.hasOwnProperty(item)) {
+                if (Object.prototype.hasOwnProperty.call(components, item)) {
                     let component = components[item];
 
                     if (!data.country && component.types.indexOf('country') > -1) {
