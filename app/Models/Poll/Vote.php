@@ -3,9 +3,9 @@
 namespace Coyote\Poll;
 
 use Coyote\Models\Scopes\ForUser;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Vote extends Model
+class Vote extends \Tests\Legacy\Services\Model
 {
     use ForUser;
 

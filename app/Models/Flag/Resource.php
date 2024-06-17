@@ -2,12 +2,10 @@
 
 namespace Coyote\Models\Flag;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Resource extends Model
+class Resource extends \Tests\Legacy\Services\Model
 {
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

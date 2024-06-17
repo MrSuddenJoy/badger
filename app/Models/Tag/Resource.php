@@ -3,7 +3,7 @@
 namespace Coyote\Tag;
 
 use Coyote\Tag;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $resource_id
@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $order
  * @property Tag $tag
  */
-class Resource extends Model
+class Resource extends \Tests\Legacy\Services\Model
 {
     /**
      * @var string

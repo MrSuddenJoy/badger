@@ -11,14 +11,14 @@ use Coyote\Services\Elasticsearch\ResultSet;
 trait Searchable
 {
     /**
-     * Get the table associated with the model.
+     * Get the table associated with the \Tests\Legacy\Services\Model.
      *
      * @return string
      */
     abstract public function getTable();
 
     /**
-     * Get the value of the model's primary key.
+     * Get the value of the \Tests\Legacy\Services\Model's primary key.
      *
      * @return mixed
      */

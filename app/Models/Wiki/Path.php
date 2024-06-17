@@ -2,7 +2,7 @@
 
 namespace Coyote\Wiki;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property int $path_id
  * @property string $path
  */
-class Path extends Model
+class Path extends \Tests\Legacy\Services\Model
 {
     use SoftDeletes;
 
@@ -53,11 +53,11 @@ class Path extends Model
     {
         parent::boot();
 
-        static::saving(function ($model) {
-            /** @var \Coyote\Wiki\Path $model */
+        static::saving(function ($\Tests\Legacy\Services\Model) {
+            /** @var \Coyote\Wiki\Path $\Tests\Legacy\Services\Model */
 
-            if (empty($model->parent_id)) {
-                $model->parent_id = null;
+            if (empty($\Tests\Legacy\Services\Model->parent_id)) {
+                $\Tests\Legacy\Services\Model->parent_id = null;
             }
         });
     }

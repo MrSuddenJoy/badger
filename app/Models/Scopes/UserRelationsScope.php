@@ -4,7 +4,7 @@ namespace Coyote\Models\Scopes;
 
 use Coyote\Services\Forum\UserDefined;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Scope;
 
 class UserRelationsScope implements Scope
@@ -16,13 +16,13 @@ class UserRelationsScope implements Scope
         $this->userDefined = $userDefined;
     }
 
-    public function apply(Builder $builder, Model $model): void
+    public function apply(Builder $builder, \Tests\Legacy\Services\Model $\Tests\Legacy\Services\Model): void
     {
         if (empty($this->getExcludedUsers())) {
             return;
         }
 
-        $builder->whereNotIn($model->getTable() . '.user_id', $this->getExcludedUsers());
+        $builder->whereNotIn($\Tests\Legacy\Services\Model->getTable() . '.user_id', $this->getExcludedUsers());
     }
 
     protected function getExcludedUsers(): ?array

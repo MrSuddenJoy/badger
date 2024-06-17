@@ -7,7 +7,7 @@ use Coyote\Services\Media\Logo;
 use Coyote\Services\Media\MediaInterface;
 use Coyote\Services\Media\SerializeClass;
 use Coyote\Tag\Category;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -23,7 +23,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property int $microblogs
  * @property mixed $resources
  */
-class Tag extends Model
+class Tag extends \Tests\Legacy\Services\Model
 {
     use SoftDeletes, SerializeClass;
 

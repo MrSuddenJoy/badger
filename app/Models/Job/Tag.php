@@ -2,9 +2,9 @@
 
 namespace Coyote\Job;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Tag extends Model
+class Tag extends \Tests\Legacy\Services\Model
 {
     const MUST_HAVE = 1;
     const NICE_TO_HAVE = 0;
@@ -17,7 +17,7 @@ class Tag extends Model
     protected $fillable = ['job_id', 'tag_id', 'priority', 'order'];
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

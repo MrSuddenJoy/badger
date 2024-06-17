@@ -2,9 +2,9 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Actkey extends Model
+class Actkey extends \Tests\Legacy\Services\Model
 {
     /**
      * The attributes that are mass assignable.

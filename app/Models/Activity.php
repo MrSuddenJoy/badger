@@ -2,9 +2,9 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Activity extends Model
+class Activity extends \Tests\Legacy\Services\Model
 {
     /**
      * @var bool

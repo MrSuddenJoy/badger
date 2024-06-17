@@ -4,7 +4,7 @@ namespace Coyote;
 
 use Coyote\Models\Asset;
 use Coyote\Pm\Text;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $id
@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property User $user
  * @property \Carbon\Carbon $read_at
  */
-class Pm extends Model
+class Pm extends \Tests\Legacy\Services\Model
 {
     const INBOX = 1;
     const SENTBOX = 2;

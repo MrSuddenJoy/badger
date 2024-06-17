@@ -2,7 +2,7 @@
 
 namespace Coyote\Page;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $id
@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $date
  * @property int $visits
  */
-class Stat extends Model
+class Stat extends \Tests\Legacy\Services\Model
 {
     /**
      * The attributes that are mass assignable.
@@ -20,7 +20,7 @@ class Stat extends Model
     protected $fillable = ['page_id', 'date', 'visits'];
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

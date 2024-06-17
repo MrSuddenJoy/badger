@@ -13,7 +13,7 @@ use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\Access\Authorizable;
 use Illuminate\Notifications\RoutesNotifications;
@@ -76,12 +76,12 @@ use Ramsey\Uuid\Uuid;
  * @property Tag[] $skills
  * @property string|null $gdpr
  */
-class User extends Model implements AuthenticatableContract, AuthorizableContract, CanResetPasswordContract
+class User extends \Tests\Legacy\Services\Model implements AuthenticatableContract, AuthorizableContract, CanResetPasswordContract
 {
     use Authenticatable, Authorizable, CanResetPassword, RoutesNotifications, HasApiTokens, SoftDeletes, ExcludeBlocked, HasPushSubscriptions;
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */
@@ -120,7 +120,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     ];
 
     /**
-     * The attributes excluded from the model's JSON form.
+     * The attributes excluded from the \Tests\Legacy\Services\Model's JSON form.
      *
      * @var array
      */
@@ -153,9 +153,9 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
     {
         parent::boot();
 
-        static::creating(function (User $model) {
-            if (empty($model->guest_id)) {
-                $model->guest_id = (string)Uuid::uuid4();
+        static::creating(function (User $\Tests\Legacy\Services\Model) {
+            if (empty($\Tests\Legacy\Services\Model->guest_id)) {
+                $\Tests\Legacy\Services\Model->guest_id = (string)Uuid::uuid4();
             }
         });
 
@@ -265,7 +265,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
 
     /**
      * @param string $objectId
-     * @return Model|null|static
+     * @return \Tests\Legacy\Services\Model|null|static
      */
     public function getUnreadNotification($objectId)
     {

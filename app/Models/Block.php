@@ -2,7 +2,7 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $id
@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $max_reputation
  * @property bool $enable_sponsor
  */
-class Block extends Model
+class Block extends \Tests\Legacy\Services\Model
 {
     /**
      * The attributes that are mass assignable.

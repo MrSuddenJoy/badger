@@ -4,7 +4,7 @@ namespace Coyote;
 
 use Coyote\Forum\Access;
 use Coyote\Models\Scopes\TrackForum;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $id
@@ -35,7 +35,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property Group[]|\Illuminate\Support\Collection $groups
  * @property Tag[] $tags
  */
-class Forum extends Model
+class Forum extends \Tests\Legacy\Services\Model
 {
     use TrackForum;
 
@@ -89,9 +89,9 @@ class Forum extends Model
     {
         parent::boot();
 
-        static::saving(function (Forum $model) {
-            if (empty($model->parent_id)) {
-                $model->parent_id = null;
+        static::saving(function (Forum $\Tests\Legacy\Services\Model) {
+            if (empty($\Tests\Legacy\Services\Model->parent_id)) {
+                $\Tests\Legacy\Services\Model->parent_id = null;
             }
         });
     }

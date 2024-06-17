@@ -2,7 +2,7 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $id
@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $partner
  * @property int $system
  */
-class Group extends Model
+class Group extends \Tests\Legacy\Services\Model
 {
     /**
      * The attributes that are mass assignable.

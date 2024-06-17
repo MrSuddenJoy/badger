@@ -4,7 +4,7 @@ namespace Coyote\Wiki;
 
 use Coyote\Models\Scopes\ForUser;
 use Coyote\User;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $wiki_id
@@ -24,7 +24,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Carbon\Carbon $created_at
  * @property User $user
  */
-class Log extends Model
+class Log extends \Tests\Legacy\Services\Model
 {
     use ForUser;
 

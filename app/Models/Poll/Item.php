@@ -2,9 +2,9 @@
 
 namespace Coyote\Poll;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Item extends Model
+class Item extends \Tests\Legacy\Services\Model
 {
     /**
      * @var string

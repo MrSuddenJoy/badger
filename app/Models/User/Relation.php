@@ -3,10 +3,10 @@
 namespace Coyote\User;
 
 use Coyote\User;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 
-class Relation extends Model
+class Relation extends \Tests\Legacy\Services\Model
 {
     /**
      * @var bool

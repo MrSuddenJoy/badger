@@ -2,14 +2,14 @@
 
 namespace Coyote\User;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property string $name
  * @property int $rate
  * @property int $order
  */
-class Skill extends Model
+class Skill extends \Tests\Legacy\Services\Model
 {
     /**
      * The attributes that are mass assignable.
@@ -19,7 +19,7 @@ class Skill extends Model
     protected $fillable = ['name', 'rate', 'order'];
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

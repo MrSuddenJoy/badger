@@ -2,7 +2,7 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Ramsey\Uuid;
 
 /**
@@ -21,7 +21,7 @@ use Ramsey\Uuid;
  * @property Coupon $coupon
  * @property string $session_id
  */
-class Payment extends Model
+class Payment extends \Tests\Legacy\Services\Model
 {
     const NEW = 1;
     const PENDING = 2;

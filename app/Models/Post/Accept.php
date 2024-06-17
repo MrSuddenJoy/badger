@@ -3,7 +3,7 @@
 namespace Coyote\Post;
 
 use Coyote\Models\Scopes\ForUser;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $post_id
@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $ip
  * @property \Coyote\Post $post
  */
-class Accept extends Model
+class Accept extends \Tests\Legacy\Services\Model
 {
     use ForUser;
 
@@ -29,7 +29,7 @@ class Accept extends Model
     protected $dateFormat = 'Y-m-d H:i:se';
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

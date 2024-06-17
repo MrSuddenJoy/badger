@@ -2,14 +2,14 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @property string $id
  * @property string $email
  */
-class Mailing extends Model
+class Mailing extends \Tests\Legacy\Services\Model
 {
     use SoftDeletes;
 

@@ -2,9 +2,9 @@
 
 namespace Coyote\Pm;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Text extends Model
+class Text extends \Tests\Legacy\Services\Model
 {
     const UPDATED_AT = null;
 

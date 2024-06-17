@@ -2,9 +2,9 @@
 
 namespace Coyote\Microblog;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Tag extends Model
+class Tag extends \Tests\Legacy\Services\Model
 {
     /**
      * The attributes that are mass assignable.
@@ -14,7 +14,7 @@ class Tag extends Model
     protected $fillable = ['microblog_id', 'tag_id'];
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

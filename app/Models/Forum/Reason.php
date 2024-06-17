@@ -2,17 +2,17 @@
 
 namespace Coyote\Forum;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $id
  * @property string $name
  * @property string $description
  */
-class Reason extends Model
+class Reason extends \Tests\Legacy\Services\Model
 {
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

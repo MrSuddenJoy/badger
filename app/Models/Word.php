@@ -2,9 +2,9 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Word extends Model
+class Word extends \Tests\Legacy\Services\Model
 {
     /**
      * The attributes that are mass assignable.

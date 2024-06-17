@@ -2,7 +2,7 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $id
@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $title
  * @property string $mode
  */
-class Pastebin extends Model
+class Pastebin extends \Tests\Legacy\Services\Model
 {
     /**
      * @var string
@@ -45,10 +45,10 @@ class Pastebin extends Model
     {
         parent::boot();
 
-        static::saving(function ($model) {
-            /** @var \Coyote\Pastebin $model */
-            if (empty($model->expires)) {
-                $model->expires = null;
+        static::saving(function ($\Tests\Legacy\Services\Model) {
+            /** @var \Coyote\Pastebin $\Tests\Legacy\Services\Model */
+            if (empty($\Tests\Legacy\Services\Model->expires)) {
+                $\Tests\Legacy\Services\Model->expires = null;
             }
         });
     }

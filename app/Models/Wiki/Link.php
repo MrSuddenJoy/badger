@@ -2,7 +2,7 @@
 
 namespace Coyote\Wiki;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $id
@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $ref_id
  * @property string $path
  */
-class Link extends Model
+class Link extends \Tests\Legacy\Services\Model
 {
     /**
      * @var string

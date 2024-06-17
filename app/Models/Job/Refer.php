@@ -2,12 +2,12 @@
 
 namespace Coyote\Job;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Refer extends Model
+class Refer extends \Tests\Legacy\Services\Model
 {
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

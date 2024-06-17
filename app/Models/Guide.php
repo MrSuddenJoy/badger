@@ -6,7 +6,7 @@ use Coyote\Guide\Role;
 use Coyote\Guide\Vote;
 use Coyote\Models\Asset;
 use Coyote\Models\Subscription;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -25,7 +25,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string $role
  * @property Role[] $roles
  */
-class Guide extends Model
+class Guide extends \Tests\Legacy\Services\Model
 {
     use Taggable, SoftDeletes;
 

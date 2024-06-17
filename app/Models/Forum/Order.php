@@ -3,9 +3,9 @@
 namespace Coyote\Forum;
 
 use Coyote\Models\Scopes\ForUser;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Order extends Model
+class Order extends \Tests\Legacy\Services\Model
 {
     use ForUser;
 
@@ -17,7 +17,7 @@ class Order extends Model
     protected $fillable = ['forum_id', 'user_id', 'is_hidden', 'order'];
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */
@@ -32,9 +32,9 @@ class Order extends Model
     {
         parent::boot();
 
-        static::saving(function ($model) {
-            if (empty($model->section)) {
-                $model->section = null;
+        static::saving(function ($\Tests\Legacy\Services\Model) {
+            if (empty($\Tests\Legacy\Services\Model->section)) {
+                $\Tests\Legacy\Services\Model->section = null;
             }
         });
     }

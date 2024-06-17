@@ -2,17 +2,17 @@
 
 namespace Coyote\Firm;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @deprecated
  * @property string $file
  * @property string $url
  */
-class Gallery extends Model
+class Gallery extends \Tests\Legacy\Services\Model
 {
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

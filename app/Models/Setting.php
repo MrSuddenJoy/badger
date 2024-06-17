@@ -2,9 +2,9 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Setting extends Model
+class Setting extends \Tests\Legacy\Services\Model
 {
     /**
      * The attributes that are mass assignable.

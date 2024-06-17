@@ -2,7 +2,7 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $id
@@ -19,7 +19,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property bool $is_default
  * @property int $boost
  */
-class Plan extends Model
+class Plan extends \Tests\Legacy\Services\Model
 {
     /**
      * @var bool

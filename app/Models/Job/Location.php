@@ -3,7 +3,7 @@
 namespace Coyote\Job;
 
 use Coyote\Country;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $job_id
@@ -15,10 +15,10 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $street_number
  * @property string $label
  */
-class Location extends Model
+class Location extends \Tests\Legacy\Services\Model
 {
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

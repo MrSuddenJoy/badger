@@ -2,7 +2,7 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $id
@@ -16,7 +16,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $fingerprint
  * @property \Coyote\User $user
  */
-class Firewall extends Model
+class Firewall extends \Tests\Legacy\Services\Model
 {
     protected $table = 'firewall';
 

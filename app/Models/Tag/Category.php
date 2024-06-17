@@ -2,13 +2,13 @@
 
 namespace Coyote\Tag;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $id
  * @property string $name
  */
-class Category extends Model
+class Category extends \Tests\Legacy\Services\Model
 {
     const LANGUAGE = 1;
     const DATABASE = 2;

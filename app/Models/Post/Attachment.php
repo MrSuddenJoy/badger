@@ -2,7 +2,7 @@
 
 namespace Coyote\Post;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @deprecated
@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Coyote\Services\Media\MediaInterface $file
  * @property \Coyote\Post $post
  */
-class Attachment extends Model
+class Attachment extends \Tests\Legacy\Services\Model
 {
     /**
      * The attributes that are mass assignable.
@@ -30,7 +30,7 @@ class Attachment extends Model
     protected $dateFormat = 'Y-m-d H:i:se';
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

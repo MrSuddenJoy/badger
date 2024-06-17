@@ -3,7 +3,7 @@
 namespace Coyote;
 
 use Coyote\Models\Flag\Resource;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -24,7 +24,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property Job[] $jobs
  * @property Microblog[] $microblogs
  */
-class Flag extends Model
+class Flag extends \Tests\Legacy\Services\Model
 {
     use SoftDeletes;
 

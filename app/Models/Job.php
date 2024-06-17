@@ -7,7 +7,7 @@ use Coyote\Job\Location;
 use Coyote\Models\Scopes\ForUser;
 use Coyote\Models\Subscription;
 use Coyote\Services\Eloquent\HasMany;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Notifications\RoutesNotifications;
 
@@ -57,7 +57,7 @@ use Illuminate\Notifications\RoutesNotifications;
  * @property Comment[] $comments
  * @property Comment[] $commentsWithChildren
  */
-class Job extends Model
+class Job extends \Tests\Legacy\Services\Model
 {
     use SoftDeletes, ForUser, RoutesNotifications;
     use Searchable {
@@ -165,13 +165,13 @@ class Job extends Model
     {
         parent::boot();
 
-        static::saving(function (Job $model) {
-            $model->score = $model->getScore();
+        static::saving(function (Job $\Tests\Legacy\Services\Model) {
+            $\Tests\Legacy\Services\Model->score = $\Tests\Legacy\Services\Model->getScore();
         });
 
-        static::creating(function (Job $model) {
-            $model->boost_at = $model->freshTimestamp();
-            $model->deadline_at = $model->freshTimestamp()->addDays($model->plan->length);
+        static::creating(function (Job $\Tests\Legacy\Services\Model) {
+            $\Tests\Legacy\Services\Model->boost_at = $\Tests\Legacy\Services\Model->freshTimestamp();
+            $\Tests\Legacy\Services\Model->deadline_at = $\Tests\Legacy\Services\Model->freshTimestamp()->addDays($\Tests\Legacy\Services\Model->plan->length);
         });
     }
 

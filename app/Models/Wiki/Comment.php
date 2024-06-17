@@ -5,7 +5,7 @@ namespace Coyote\Wiki;
 use Coyote\Models\Scopes\ForUser;
 use Coyote\User;
 use Coyote\Wiki;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -18,12 +18,12 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property Wiki $wiki
  * @property User $user
  */
-class Comment extends Model
+class Comment extends \Tests\Legacy\Services\Model
 {
     use SoftDeletes, ForUser;
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */
