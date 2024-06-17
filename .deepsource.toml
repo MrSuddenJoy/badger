@@ -1,5 +1,9 @@
 version = 1
 
+test_patterns = [  
+  "/resources/js/tests/store/modules/posts.spec.ts"
+]
+
 [[analyzers]]
 name = "php"
 
@@ -11,7 +15,3 @@ name = "javascript"
     "mocha",
     "nodejs"
   ]
-
-test_patterns = [  
-  "/resources/js/tests/store/modules/posts.spec.ts"
-]
