@@ -31,7 +31,7 @@ export default Vue.extend({
   },
   methods: {
     changeCollapse(id: number): void {
-      this.$set(this.collapse, id, !(!!(this.collapse[id])));
+      this.$set(this.collapse, id, Boolean(!(this.collapse[id])));
     },
 
     containsUserTags(topic: Topic): boolean {
@@ -56,7 +56,7 @@ export default Vue.extend({
           .sort((a, b) => a.order < b.order ? -1 : 1)
           .reduce((acc, forum) => {
             if (!acc[forum.section]) {
-              acc[forum.section] = {name: forum.section, order: forum.order, categories: [], isCollapse: !!(this.collapse[forum.id])};
+              acc[forum.section] = {name: forum.section, order: forum.order, categories: [], isCollapse: Boolean(this.collapse[forum.id])};
             }
 
             acc[forum.section].categories.push(forum);
@@ -68,7 +68,7 @@ export default Vue.extend({
 
     groups(): ForumGroup {
       return this.topics.reduce((acc, item) => {
-        let index = this.groupStickyTopics ? (+!item.is_sticky) : 0;
+        let index = this.groupStickyTopics ? (Number(!item.is_sticky)) : 0;
 
         if (!acc[index]) {
           acc[index] = [];

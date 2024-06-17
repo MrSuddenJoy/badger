@@ -55,7 +55,7 @@ function submit(advertising: boolean, analytics: boolean): void {
 }
 
 function gdprSubmitted(): boolean {
-  return guest && !!localStorage.getItem('gdpr');
+  return guest && Boolean(localStorage.getItem('gdpr'));
 }
 
 function storeGdpr(): void {
