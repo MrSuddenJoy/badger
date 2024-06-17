@@ -286,11 +286,11 @@
     }
 
     get isGross() {
-      return +this.job.is_gross;
+      return Number(this.job.is_gross);
     }
 
     set isGross(flag) {
-      this.job.is_gross = !!flag;
+      this.job.is_gross = Boolean(flag);
     }
   }
 
