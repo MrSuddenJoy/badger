@@ -2,9 +2,7 @@
 
 namespace Coyote\Firm;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Industry extends Model
+class Industry extends \Tests\Legacy\Services\Model
 {
     /**
      * The database table used by the model.
