@@ -13,5 +13,5 @@ name = "javascript"
   ]
 
 test_patterns = \[  
-  "resources/**/*"
+  "resources/js/tests/store/modules/posts.spec.ts"
 ]
