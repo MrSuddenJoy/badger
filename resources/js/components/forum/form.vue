@@ -183,7 +183,7 @@ import {default as PerfectScrollbar} from '../perfect-scrollbar.js';
 })
 export default class VueForm extends Vue {
   isProcessing = false;
-  currentTab: number = 0;
+  currentTab = 0;
   errors = {};
   similar: Topic[] = [];
   readonly topic!: Topic;

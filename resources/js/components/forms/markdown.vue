@@ -133,8 +133,8 @@ const PREVIEW = 'Podgląd';
   },
 })
 export default class VueMarkdown extends Vue {
-  searchText: string = '';
-  previewHtml: string = '';
+  searchText = '';
+  previewHtml = '';
   currentTab: string = CONTENT;
   isProcessing = false;
   progress = 0;
