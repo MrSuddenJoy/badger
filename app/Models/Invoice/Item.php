@@ -2,14 +2,14 @@
 
 namespace Coyote\Invoice;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property string $description
  * @property float $price
  * @property int $vat_rate
  */
-class Item extends Model
+class Item extends \Tests\Legacy\Services\Model
 {
     /**
      * @var string

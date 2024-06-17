@@ -2,9 +2,9 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Reputation extends Model
+class Reputation extends \Tests\Legacy\Services\Model
 {
     const POST_VOTE = 1;
     const POST_ACCEPT = 2;

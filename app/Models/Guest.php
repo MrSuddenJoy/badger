@@ -3,7 +3,7 @@
 namespace Coyote;
 
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property string $id
@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property mixed interests
  * @property array $settings
  */
-class Guest extends Model
+class Guest extends \Tests\Legacy\Services\Model
 {
     /**
      * The "type" of the primary key ID.

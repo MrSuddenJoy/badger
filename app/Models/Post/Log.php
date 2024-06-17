@@ -3,7 +3,7 @@
 namespace Coyote\Post;
 
 use Coyote\User;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Coyote\Post;
 
 /**
@@ -16,7 +16,7 @@ use Coyote\Post;
  * @property string $ip
  * @property string $browser
  */
-class Log extends Model
+class Log extends \Tests\Legacy\Services\Model
 {
     /**
      * The attributes that are mass assignable.
@@ -31,7 +31,7 @@ class Log extends Model
     protected $dateFormat = 'Y-m-d H:i:se';
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

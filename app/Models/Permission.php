@@ -2,10 +2,10 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Cache;
 
-class Permission extends Model
+class Permission extends \Tests\Legacy\Services\Model
 {
     /**
      * Nie bedziemy dodawac nowych uprawnien z poziomu Laravel

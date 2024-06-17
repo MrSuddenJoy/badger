@@ -7,7 +7,7 @@ use Coyote\Models\Scopes\Sortable;
 use Coyote\Models\Scopes\TrackForum;
 use Coyote\Models\Scopes\TrackTopic;
 use Coyote\Models\Subscription;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Query\Builder;
 
@@ -42,7 +42,7 @@ use Illuminate\Database\Query\Builder;
  * @property Poll $poll
  * @property Post $firstPost
  */
-class Topic extends Model
+class Topic extends \Tests\Legacy\Services\Model
 {
     use SoftDeletes, Sortable, Taggable, TrackTopic, TrackForum;
     use Searchable {
@@ -88,8 +88,8 @@ class Topic extends Model
     {
         parent::boot();
 
-        static::saving(function (Topic $model) {
-            $model->rank = $model->getRank();
+        static::saving(function (Topic $\Tests\Legacy\Services\Model) {
+            $\Tests\Legacy\Services\Model->rank = $\Tests\Legacy\Services\Model->getRank();
         });
     }
 

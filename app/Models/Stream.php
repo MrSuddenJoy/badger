@@ -2,9 +2,9 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Stream extends Model
+class Stream extends \Tests\Legacy\Services\Model
 {
     use Searchable;
 

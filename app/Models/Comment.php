@@ -2,7 +2,7 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -19,7 +19,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property string $resource_type
  * @property int $resource_id
  */
-class Comment extends Model
+class Comment extends \Tests\Legacy\Services\Model
 {
     use SoftDeletes;
 

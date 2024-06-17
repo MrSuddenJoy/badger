@@ -2,7 +2,7 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property int $amount
  * @property int $user_id
  */
-class Coupon extends Model
+class Coupon extends \Tests\Legacy\Services\Model
 {
     use SoftDeletes;
 

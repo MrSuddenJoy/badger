@@ -2,9 +2,9 @@
 
 namespace Coyote\Job;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Feature extends Model
+class Feature extends \Tests\Legacy\Services\Model
 {
     /**
      * The attributes that are mass assignable.
@@ -14,7 +14,7 @@ class Feature extends Model
     protected $fillable = ['job_id', 'feature_id', 'value', 'is_checked'];
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

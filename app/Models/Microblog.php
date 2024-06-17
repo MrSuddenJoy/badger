@@ -9,7 +9,7 @@ use Coyote\Models\Scopes\UserRelationsScope;
 use Coyote\Models\Subscription;
 use Coyote\Services\Media\SerializeClass;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
@@ -41,7 +41,7 @@ use Illuminate\Support;
  * @property Microblog\Vote[]|Support\Collection $voters
  * @property Asset[]|Support\Collection $assets
  */
-class Microblog extends Model
+class Microblog extends \Tests\Legacy\Services\Model
 {
     use SoftDeletes, Taggable, ForUser, SerializeClass;
     use Searchable {
@@ -69,7 +69,7 @@ class Microblog extends Model
     public static function boot(): void
     {
         parent::boot();
-        static::creating(fn(Microblog $model) => $model->resetScore());
+        static::creating(fn(Microblog $\Tests\Legacy\Services\Model) => $\Tests\Legacy\Services\Model->resetScore());
         static::addGlobalScope(resolve(UserRelationsScope::class));
     }
 

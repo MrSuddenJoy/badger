@@ -5,7 +5,7 @@ namespace Coyote\Microblog;
 use Coyote\Microblog;
 use Coyote\Models\Scopes\ForUser;
 use Coyote\User;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $microblog_id
@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property \Coyote\User $user
  * @property \Coyote\Microblog $microblog
  */
-class Vote extends Model
+class Vote extends \Tests\Legacy\Services\Model
 {
     use ForUser;
 
@@ -26,7 +26,7 @@ class Vote extends Model
     protected $fillable = ['microblog_id', 'user_id', 'ip'];
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

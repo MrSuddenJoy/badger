@@ -2,7 +2,7 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property string $filename
@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $impressions
  * @property int $clicks
  */
-class Banner extends Model
+class Banner extends \Tests\Legacy\Services\Model
 {
     /**
      * @var bool

@@ -2,7 +2,7 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $id
@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $subject
  * @property \Carbon\Carbon $created_at
  */
-class Mail extends Model
+class Mail extends \Tests\Legacy\Services\Model
 {
     const UPDATED_AT = null;
 

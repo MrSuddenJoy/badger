@@ -2,7 +2,7 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $id
@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $default
  * @property \Illuminate\Database\Eloquent\Relations\Pivot $pivot
  */
-class Feature extends Model
+class Feature extends \Tests\Legacy\Services\Model
 {
     /**
      * @var bool

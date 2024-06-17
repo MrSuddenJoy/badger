@@ -5,9 +5,9 @@ namespace Coyote\Guide;
 use Coyote\Guide;
 use Coyote\Models\Scopes\ForUser;
 use Coyote\User;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Role extends Model
+class Role extends \Tests\Legacy\Services\Model
 {
     use ForUser;
 
@@ -23,7 +23,7 @@ class Role extends Model
     protected $fillable = ['guide_id', 'user_id', 'role'];
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

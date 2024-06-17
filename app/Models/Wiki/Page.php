@@ -3,7 +3,7 @@
 namespace Coyote\Wiki;
 
 use Coyote\Wiki;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property bool $is_locked
  * @property Attachment[] $attachments
  */
-class Page extends Model
+class Page extends \Tests\Legacy\Services\Model
 {
     use SoftDeletes;
 

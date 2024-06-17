@@ -4,7 +4,7 @@ namespace Coyote;
 
 use Coyote\Notification\Sender;
 use Coyote\Notification\Type;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $type_id
@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property Notification\Sender[] $senders
  * @private User $user
  */
-class Notification extends Model
+class Notification extends \Tests\Legacy\Services\Model
 {
     const PM = 1;
     const TOPIC_SUBSCRIBER = 2;

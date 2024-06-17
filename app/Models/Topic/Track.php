@@ -2,9 +2,9 @@
 
 namespace Coyote\Topic;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Track extends Model
+class Track extends \Tests\Legacy\Services\Model
 {
     /**
      * The attributes that are mass assignable.
@@ -14,7 +14,7 @@ class Track extends Model
     protected $fillable = ['topic_id', 'forum_id', 'marked_at', 'guest_id'];
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

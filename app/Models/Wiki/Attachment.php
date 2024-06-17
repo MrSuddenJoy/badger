@@ -2,7 +2,7 @@
 
 namespace Coyote\Wiki;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Coyote\Services\Media\Factory as MediaFactory;
 
 /**
@@ -13,7 +13,7 @@ use Coyote\Services\Media\Factory as MediaFactory;
  * @property int $wiki_id
  * @property \Coyote\Services\Media\MediaInterface $file
  */
-class Attachment extends Model
+class Attachment extends \Tests\Legacy\Services\Model
 {
     /**
      * The attributes that are mass assignable.
@@ -28,7 +28,7 @@ class Attachment extends Model
     protected $dateFormat = 'Y-m-d H:i:se';
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

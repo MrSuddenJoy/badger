@@ -3,9 +3,9 @@
 namespace Coyote\Forum;
 
 use Coyote\Group;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Access extends Model
+class Access extends \Tests\Legacy\Services\Model
 {
     /**
      * The attributes that are mass assignable.
@@ -15,7 +15,7 @@ class Access extends Model
     protected $fillable = ['forum_id', 'group_id'];
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */
@@ -27,7 +27,7 @@ class Access extends Model
     public $timestamps = false;
 
     /**
-     * The primary key for the model.
+     * The primary key for the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

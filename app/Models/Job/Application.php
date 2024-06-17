@@ -4,7 +4,7 @@ namespace Coyote\Job;
 
 use Coyote\Job;
 use Coyote\Models\Scopes\ForGuest;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
 /**
@@ -20,12 +20,12 @@ use Illuminate\Notifications\Notifiable;
  * @property string $salary
  * @property string $dismissal_period
  */
-class Application extends Model
+class Application extends \Tests\Legacy\Services\Model
 {
     use ForGuest, Notifiable;
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

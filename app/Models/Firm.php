@@ -7,7 +7,7 @@ use Coyote\Services\Eloquent\HasMany;
 use Coyote\Services\Media\Factory as MediaFactory;
 use Coyote\Services\Media\Logo;
 use Coyote\Services\Media\SerializeClass;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -29,7 +29,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property Logo $logo
  * @property \Coyote\Country $country
  */
-class Firm extends Model
+class Firm extends \Tests\Legacy\Services\Model
 {
     use SoftDeletes, SerializeClass;
 
@@ -192,7 +192,7 @@ class Firm extends Model
 
     /**
      * @param array $attributes
-     * @return $this|Model
+     * @return $this|\Tests\Legacy\Services\Model
      */
     public function fill(array $attributes)
     {

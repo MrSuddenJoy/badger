@@ -5,7 +5,7 @@ namespace Coyote\Post;
 use Coyote\Post;
 use Coyote\Services\Parser\Factories\CommentFactory;
 use Coyote\User;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -18,7 +18,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property User $user
  * @property \Carbon\Carbon $created_at
  */
-class Comment extends Model
+class Comment extends \Tests\Legacy\Services\Model
 {
     use SoftDeletes;
 
@@ -40,7 +40,7 @@ class Comment extends Model
     protected $dateFormat = 'Y-m-d H:i:se';
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

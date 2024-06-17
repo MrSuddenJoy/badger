@@ -4,17 +4,17 @@ namespace Coyote\Wiki;
 
 use Coyote\Models\Scopes\ForUser;
 use Coyote\User;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property User $user
  */
-class Subscriber extends Model
+class Subscriber extends \Tests\Legacy\Services\Model
 {
     use ForUser;
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

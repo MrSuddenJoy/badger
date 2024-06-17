@@ -3,9 +3,9 @@
 namespace Coyote\Topic;
 
 use Coyote\Models\Scopes\ForUser;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class User extends \Tests\Legacy\Services\Model
 {
     use ForUser;
 
@@ -17,7 +17,7 @@ class User extends Model
     protected $fillable = ['topic_id', 'user_id'];
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

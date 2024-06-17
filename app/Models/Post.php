@@ -4,7 +4,7 @@ namespace Coyote;
 
 use Coyote\Models\Asset;
 use Coyote\Models\Subscription;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -35,7 +35,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property \Coyote\User $deleter
  * @property \Coyote\Post\Accept $accept
  */
-class Post extends Model
+class Post extends \Tests\Legacy\Services\Model
 {
     use SoftDeletes;
 

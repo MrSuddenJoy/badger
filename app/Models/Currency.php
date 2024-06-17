@@ -2,14 +2,14 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $id
  * @property string $name
  * @property string $symbol
  */
-class Currency extends Model
+class Currency extends \Tests\Legacy\Services\Model
 {
     const PLN = 1;
     const EUR = 2;

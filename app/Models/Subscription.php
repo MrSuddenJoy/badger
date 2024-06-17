@@ -5,9 +5,9 @@ namespace Coyote\Models;
 use Coyote\Models\Scopes\ExcludeBlocked;
 use Coyote\Models\Scopes\ForUser;
 use Coyote\User;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Subscription extends Model
+class Subscription extends \Tests\Legacy\Services\Model
 {
     use ForUser, ExcludeBlocked;
 
@@ -19,7 +19,7 @@ class Subscription extends Model
     protected $fillable = ['user_id'];
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

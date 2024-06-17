@@ -3,7 +3,7 @@
 namespace Coyote;
 
 use Coyote\Invoice\Item;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $user_id
@@ -19,7 +19,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property Country $country
  * @property int $seq
  */
-class Invoice extends Model
+class Invoice extends \Tests\Legacy\Services\Model
 {
     const UPDATED_AT = null;
 
@@ -39,10 +39,10 @@ class Invoice extends Model
     {
         parent::boot();
 
-        static::saving(function (Invoice $model) {
+        static::saving(function (Invoice $\Tests\Legacy\Services\Model) {
             foreach (['number', 'country_id'] as $key) {
-                if (empty($model->{$key})) {
-                    $model->{$key} = null;
+                if (empty($\Tests\Legacy\Services\Model->{$key})) {
+                    $\Tests\Legacy\Services\Model->{$key} = null;
                 }
             }
         });

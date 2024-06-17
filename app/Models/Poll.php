@@ -2,7 +2,7 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
 
 /**
@@ -16,7 +16,7 @@ use Carbon\Carbon;
  * @property Carbon $updated_at
  * @property Topic $topic
  */
-class Poll extends Model
+class Poll extends \Tests\Legacy\Services\Model
 {
     /**
      * The attributes that are mass assignable.

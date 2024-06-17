@@ -3,7 +3,7 @@
 namespace Coyote\Models;
 
 use Coyote\Services\Media\Url;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $id
@@ -15,7 +15,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $count
  * @property mixed $content
  */
-class Asset extends Model
+class Asset extends \Tests\Legacy\Services\Model
 {
     const UPDATED_AT = null;
 

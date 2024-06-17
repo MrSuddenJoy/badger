@@ -2,13 +2,13 @@
 
 namespace Coyote\Page;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int $visits
  * @property int $user_id
  */
-class Visit extends Model
+class Visit extends \Tests\Legacy\Services\Model
 {
     /**
      * The attributes that are mass assignable.
@@ -18,7 +18,7 @@ class Visit extends Model
     protected $fillable = ['user_id', 'visits'];
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */

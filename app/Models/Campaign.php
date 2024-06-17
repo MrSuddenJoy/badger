@@ -2,9 +2,9 @@
 
 namespace Coyote;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Campaign extends Model
+class Campaign extends \Tests\Legacy\Services\Model
 {
     /**
      * @var bool

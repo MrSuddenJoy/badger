@@ -2,9 +2,9 @@
 
 namespace Coyote\Forum;
 
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 
-class Permission extends Model
+class Permission extends \Tests\Legacy\Services\Model
 {
     /**
      * The attributes that are mass assignable.
@@ -14,7 +14,7 @@ class Permission extends Model
     protected $fillable = ['forum_id', 'group_id', 'permission_id', 'value'];
 
     /**
-     * The database table used by the model.
+     * The database table used by the \Tests\Legacy\Services\Model.
      *
      * @var string
      */
