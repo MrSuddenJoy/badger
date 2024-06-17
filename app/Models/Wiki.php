@@ -86,7 +86,7 @@ class Wiki extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function subscribers()
     {
@@ -94,7 +94,7 @@ class Wiki extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function logs()
     {
@@ -102,7 +102,7 @@ class Wiki extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function paths()
     {
@@ -118,7 +118,7 @@ class Wiki extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function children()
     {
@@ -126,7 +126,7 @@ class Wiki extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function comments()
     {
@@ -145,7 +145,7 @@ class Wiki extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function links()
     {
@@ -153,7 +153,7 @@ class Wiki extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function attachments()
     {

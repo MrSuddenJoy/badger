@@ -44,7 +44,7 @@ class Page extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function visits()
     {
@@ -52,7 +52,7 @@ class Page extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function stats()
     {

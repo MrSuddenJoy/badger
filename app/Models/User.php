@@ -219,7 +219,7 @@ class User extends \Tests\Legacy\Services\Model implements AuthenticatableContra
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function actkey()
     {
@@ -235,7 +235,7 @@ class User extends \Tests\Legacy\Services\Model implements AuthenticatableContra
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function invoices()
     {
@@ -243,7 +243,7 @@ class User extends \Tests\Legacy\Services\Model implements AuthenticatableContra
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function notifications()
     {
@@ -251,7 +251,7 @@ class User extends \Tests\Legacy\Services\Model implements AuthenticatableContra
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function relations()
     {
@@ -273,7 +273,7 @@ class User extends \Tests\Legacy\Services\Model implements AuthenticatableContra
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function notificationSettings()
     {

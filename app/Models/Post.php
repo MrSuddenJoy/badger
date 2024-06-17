@@ -87,7 +87,7 @@ class Post extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function comments()
     {
@@ -111,7 +111,7 @@ class Post extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function votes()
     {
@@ -167,7 +167,7 @@ class Post extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function logs()
     {

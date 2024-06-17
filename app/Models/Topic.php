@@ -146,7 +146,7 @@ class Topic extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function users()
     {
@@ -178,7 +178,7 @@ class Topic extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function tracks()
     {
@@ -186,7 +186,7 @@ class Topic extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function posts()
     {

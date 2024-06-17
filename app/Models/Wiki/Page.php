@@ -55,7 +55,7 @@ class Page extends \Tests\Legacy\Services\Model
     ];
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function logs()
     {
@@ -63,7 +63,7 @@ class Page extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function paths()
     {
@@ -71,7 +71,7 @@ class Page extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function comments()
     {
@@ -79,7 +79,7 @@ class Page extends \Tests\Legacy\Services\Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return null
      */
     public function attachments()
     {
