@@ -11,7 +11,7 @@ export default class Router {
 
     resolve() {
         for (const path in this._routes) {
-            if (this._routes.hasOwnProperty(path)) {
+            if (Object.prototype.hasOwnProperty.call(this._routes, path)) {
                 if (this._compile(path).test(this._location)) {
                     this._routes[path]();
                     break;
