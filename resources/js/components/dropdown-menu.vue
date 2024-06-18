@@ -9,7 +9,7 @@
   import Component from "vue-class-component";
   import { mixin as clickaway } from 'vue-clickaway';
 
-  // @ts-ignore
+  // @ts-expect-error
   @Component({
     mixins: [ clickaway ]
   })

@@ -70,9 +70,9 @@ describe('microblog mutation', () => {
     mutations.ADD_COMMENT(state, { parent, comment });
 
     expect(parent.id! in state.data).toBeTruthy();
-    // @ts-ignore
+    // @ts-expect-error
     expect(state.data[parent.id!].comments[comment.id]).toBeInstanceOf(Object);
-    // @ts-ignore
+    // @ts-expect-error
     expect(state.data[parent.id!].comments_count).toBe(1);
   });
 

@@ -97,7 +97,7 @@
   import VueUserDecorator from './decorators/user.vue';
   import { HitCategory, Contexts, Models } from '@/types/search';
 
-  // @ts-ignore
+  // @ts-expect-error
   @Component({
     mixins: [ clickaway ],
     store,
@@ -141,7 +141,7 @@
     mounted() {
       document.addEventListener('keydown', this.shortcutSupport);
 
-      // @ts-ignore
+      // @ts-expect-error
       history.onpushstate = window.onpopstate = () => {
         // wait for location to really change before setting up new url
         setTimeout(() => this.makeParams(), 0);
