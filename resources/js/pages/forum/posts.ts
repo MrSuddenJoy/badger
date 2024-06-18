@@ -98,7 +98,7 @@ export default Vue.extend({
   },
   computed: {
     markdownRef(): VueMarkdown {
-      // @ts-ignore
+      // @ts-expect-error
       return this.$refs['js-submit-form'].$refs['markdown']!;
     },
     ...mapGetters('posts', ['posts', 'totalPages', 'currentPage']),

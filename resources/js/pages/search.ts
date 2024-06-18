@@ -270,13 +270,13 @@ new Vue({
   const pushState = history.pushState;
 
   history.pushState = function(state) {
-    // @ts-ignore
+    // @ts-expect-error
     if (typeof history.onpushstate == "function") {
-      // @ts-ignore
+      // @ts-expect-error
       history.onpushstate({state: state});
     }
 
-    // @ts-ignore
+    // @ts-expect-error
     return pushState.apply(history, arguments);
   };
 })(window.history);

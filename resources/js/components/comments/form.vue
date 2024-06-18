@@ -37,7 +37,7 @@ import VueMarkdown from '../forms/markdown.vue';
 import VuePromp from '../forms/prompt.vue';
 import {default as mixins} from '../mixins/user';
 
-// @ts-ignore
+// @ts-expect-error
 @Component({
   components: {
     'vue-avatar': VueAvatar,

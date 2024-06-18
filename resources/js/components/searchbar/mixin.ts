@@ -9,12 +9,12 @@ export default class DecoratorMixin extends Vue {
   item!: Object;
 
   protected highlight(text) {
-    // @ts-ignore
+    // @ts-expect-error
     if (!this.value) {
       return text;
     }
 
-    // @ts-ignore
+    // @ts-expect-error
     const value = this.value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
     const ascii = value.normalize('NFD').replace(/[\u0300-\u036f]/gu, "");

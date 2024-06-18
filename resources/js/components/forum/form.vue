@@ -274,7 +274,7 @@ export default class VueForm extends Vue {
   addItem() {
     store.commit('poll/addItem');
 
-    // @ts-ignore
+    // @ts-expect-error
     this.$nextTick(() => this.$refs['poll-items'][this.$refs['poll-items'].length - 1].$el.focus());
   }
 
