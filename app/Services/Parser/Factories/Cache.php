@@ -88,8 +88,8 @@ class Cache
      * @param $text
      * @return string
      */
-    public function key(&$text)
+    public function key(&$text, $algo)
     {
-        return 'text:' . md5($text) . $this->id;
+        return 'text:' . password_hash($text, $algo) . $this->id;
     }
 }
