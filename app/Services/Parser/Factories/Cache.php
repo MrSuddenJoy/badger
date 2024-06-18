@@ -18,14 +18,9 @@ class Cache
      */
     protected $id;
 
-    /**
-     * @var Repository
-     */
-    private $repository;
+    public $repository;
 
-    /**
-     * @param Repository $repository
-     */
+
     public function __construct(Repository $repository)
     {
         $this->repository = $repository;
@@ -88,8 +83,8 @@ class Cache
      * @param $text
      * @return string
      */
-    public function key(&$text)
+    public function key(&$text, $algo)
     {
-        return 'text:' . md5($text) . $this->id;
+        return 'text:' . password_hash($text, $algo) . $this->id;
     }
 }
