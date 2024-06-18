@@ -3,7 +3,7 @@
 namespace Coyote\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use \Coyote\Http\Controllers\Controller;
 
 class PermanentRedirectController extends Controller
 {

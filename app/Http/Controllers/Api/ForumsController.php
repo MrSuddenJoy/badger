@@ -8,7 +8,7 @@ use Coyote\Repositories\Criteria\Forum\AccordingToUserOrder;
 use Coyote\Repositories\Criteria\Forum\OnlyThoseWithAccess;
 use Coyote\Services\Guest;
 use Illuminate\Container\Container;
-use Illuminate\Routing\Controller;
+use \Coyote\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Factory as Auth;
 
 class ForumsController extends Controller

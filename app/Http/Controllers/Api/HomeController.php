@@ -2,7 +2,7 @@
 
 namespace Coyote\Http\Controllers\Api;
 
-use Illuminate\Routing\Controller;
+use \Coyote\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {

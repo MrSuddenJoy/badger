@@ -16,7 +16,7 @@ use Coyote\User;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use \Coyote\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Factory as Auth;
 
 class TopicsController extends Controller

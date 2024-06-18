@@ -6,7 +6,7 @@ use Coyote\Http\Resources\Api\MicroblogResource;
 use Coyote\Repositories\Contracts\MicroblogRepositoryInterface as MicroblogRepository;
 use Coyote\Repositories\Criteria\EagerLoading;
 use Coyote\Repositories\Criteria\Microblog\OrderById;
-use Illuminate\Routing\Controller;
+use \Coyote\Http\Controllers\Controller;
 
 class MicroblogsController extends Controller
 {

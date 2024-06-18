@@ -5,7 +5,7 @@ namespace Coyote\Http\Controllers\Api;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use \Coyote\Http\Controllers\Controller;
 
 class LoginController extends Controller
 {

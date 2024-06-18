@@ -19,7 +19,7 @@ use Coyote\Repositories\Criteria\Job\PriorDeadline;
 use Coyote\Repositories\Criteria\Sort;
 use Coyote\Services\Job\SubmitsJob;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Routing\Controller;
+use \Coyote\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Factory as Auth;
 
 class JobsController extends Controller

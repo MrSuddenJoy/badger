@@ -10,7 +10,7 @@ use Coyote\Repositories\Criteria\Forum\OnlyThoseWithAccess;
 use Coyote\Repositories\Criteria\Sort;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use \Coyote\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Factory as Auth;
 
 class PostsController extends Controller

@@ -9,7 +9,7 @@ use Coyote\Services\Elasticsearch\Raw;
 use Coyote\Services\Skills\Predictions;
 use Coyote\Tag;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use \Coyote\Http\Controllers\Controller;
 
 class AdController extends Controller
 {
