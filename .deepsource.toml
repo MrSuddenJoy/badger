@@ -1,7 +1,8 @@
 version = 1
 
-test_patterns = [  
-  "/resources/js/tests/**/*"
+test_patterns = [
+  "/resources/js/tests/**/*",
+  "/tests/**/*"
 ]
 
 [[analyzers]]
