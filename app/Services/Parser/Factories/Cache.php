@@ -19,14 +19,12 @@ class Cache
     protected $id;
 
     /**
-     * @var Repository
+     * @var \Coyote\Repositories\Eloquent\Repository
      */
-    private $repository;
+    public $repository;
 
-    /**
-     * @param Repository $repository
-     */
-    public function __construct(Repository $repository)
+
+    public function __construct(\Coyote\Repositories\Eloquent\Repository $repository)
     {
         $this->repository = $repository;
     }
