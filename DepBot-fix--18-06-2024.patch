@@ -1,0 +1,70 @@
+diff --git a/yarn.lock b/yarn.lock
+index e6b7e63..b0c477b 100644
+--- a/yarn.lock
++++ b/yarn.lock
+@@ -2668,23 +2668,7 @@ brace-expansion@^1.1.7:
+     balanced-match "^1.0.0"
+     concat-map "0.0.1"
+ 
+-braces@^2.3.1, braces@^2.3.2:
+-  version "2.3.2"
+-  resolved "https://registry.yarnpkg.com/braces/-/braces-2.3.2.tgz#5979fd3f14cd531565e5fa2df1abfff1dfaee729"
+-  integrity sha512-aNdbnj9P8PjdXU4ybaWLK2IF3jc/EoDYbC7AazW6to3TRsfXxscC9UXOB5iDiEQrkyIbWp2SLQda4+QAa7nc3w==
+-  dependencies:
+-    arr-flatten "^1.1.0"
+-    array-unique "^0.3.2"
+-    extend-shallow "^2.0.1"
+-    fill-range "^4.0.0"
+-    isobject "^3.0.1"
+-    repeat-element "^1.1.2"
+-    snapdragon "^0.8.1"
+-    snapdragon-node "^2.0.1"
+-    split-string "^3.0.2"
+-    to-regex "^3.0.1"
+-
+-braces@^3.0.1, braces@~3.0.2:
++braces@3.0.3:
+   version "3.0.3"
+   resolved "https://registry.yarnpkg.com/braces/-/braces-3.0.3.tgz#490332f40919452272d55a8480adc0c441358789"
+   integrity sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==
+@@ -3847,9 +3831,9 @@ ee-first@1.1.1:
+   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
+   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
+ 
+-ejs@^2.6.1:
+-  version "2.7.4"
+-  resolved "https://registry.yarnpkg.com/ejs/-/ejs-2.7.4.tgz#48661287573dcc53e366c7a1ae52c3a120eec9ba"
++ejs@3.1.7:
++  version "3.1.7"
++  resolved "https://registry.yarnpkg.com/ejs/-/ejs-3.1.7.tgz#48661287573dcc53e366c7a1ae52c3a120eec9ba"
+   integrity sha512-7vmuyh5+kuUyJKePhQfRQBhXV5Ce+RnaeeQArKu1EAMpL3WbgMt5WG6uQZpEVvYSSsxMXRKOewtDk9RaTKXRlA==
+ 
+ electron-to-chromium@^1.4.17:
+@@ -4563,15 +4547,7 @@ glob-all@^3.1.0:
+     glob "^7.1.2"
+     yargs "^15.3.1"
+ 
+-glob-parent@^3.1.0:
+-  version "3.1.0"
+-  resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-3.1.0.tgz#9e6af6299d8d3bd2bd40430832bd113df906c5ae"
+-  integrity sha512-E8Ak/2+dZY6fnzlR7+ueWvhsH1SjHr4jjss4YS/h4py44jY9MhK/VFdaZJAWDz6BbL21KeteKxFSFpq8OS5gVA==
+-  dependencies:
+-    is-glob "^3.1.0"
+-    path-dirname "^1.0.0"
+-
+-glob-parent@~5.1.2:
++glob-parent@5.1.2:
+   version "5.1.2"
+   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
+   integrity sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==
+@@ -6487,8 +6463,8 @@ npmlog@^4.1.2:
+     gauge "~2.7.3"
+     set-blocking "~2.0.0"
+ 
+-nth-check@^1.0.2:
+-  version "1.0.2"
++nth-check@2.0.1:
++  version "2.0.1"
+   resolved "https://registry.yarnpkg.com/nth-check/-/nth-check-1.0.2.tgz#b2bd295c37e3dd58a3bf0700376663ba4d9cf05c"
+   integrity sha512-WeBOdju8SnzPN5vTUJYxYUxLeXpCaVP5i5e0LF8fg7WORF2Wd7wFX/pk0tYZk7s8T+J7VLy0Da6J1+wCT0AtHg==
+   dependencies:
