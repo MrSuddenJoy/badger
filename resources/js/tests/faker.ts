@@ -1,5 +1,5 @@
 import { Post, Topic } from "../types/models";
-const faker = require('faker');
+import faker from 'faker';
 
 export function post(props?: any): Post {
   const lorem = faker.lorem.text();
@@ -30,7 +30,6 @@ export function post(props?: any): Post {
 }
 
 export function topic(props?: any): Topic {
-  const lorem = faker.lorem.text();
 
   return Object.assign({
     id: faker.random.number(),
