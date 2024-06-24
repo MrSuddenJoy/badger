@@ -1,6 +1,6 @@
 import store from "../../../store/modules/microblogs";
 import {Microblog} from "@/types/models";
-const faker = require('faker');
+import faker from 'faker';
 
 const { mutations } = store;
 
@@ -23,6 +23,10 @@ function fake(): Microblog {
     comments_count: 0,
     url: '',
     metadata: '',
+    
+    /**
+     * @summary Do we realy need below entry? Upon creation, microblog entry is created, not deleted.......
+     */
     deleted_at: null
   };
 }
