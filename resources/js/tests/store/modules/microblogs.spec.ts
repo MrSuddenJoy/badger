@@ -1,6 +1,6 @@
 import store from "../../../store/modules/microblogs";
 import {Microblog} from "@/types/models";
-import faker from 'faker';
+import faker from '../../faker';
 
 const { mutations } = store;
 
