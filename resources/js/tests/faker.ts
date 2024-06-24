@@ -1,7 +1,6 @@
 import { Post, Topic } from "../types/models";
-import faker from 'faker';
 
-export function post(props?: any): Post {
+export default function post(props?: any): Post {
 
   return Object.assign({
     comments: [],
