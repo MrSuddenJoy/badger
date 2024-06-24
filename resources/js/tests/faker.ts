@@ -2,13 +2,12 @@ import { Post, Topic } from "../types/models";
 import faker from 'faker';
 
 export function post(props?: any): Post {
-  const lorem = faker.lorem.text();
 
   return Object.assign({
     comments: [],
     created_at: new Date(),
     deleted_at: null,
-    html: lorem,
+    html: null,
     id: faker.random.number(),
     is_accepted: false,
     is_locked: false,
@@ -23,7 +22,7 @@ export function post(props?: any): Post {
       adm_access: false
     },
     score: 0,
-    text: lorem,
+    text: null,
     updated_at: new Date(),
     url: "",
   }, props);
@@ -33,7 +32,7 @@ export function topic(props?: any): Topic {
 
   return Object.assign({
     id: faker.random.number(),
-    title: faker.lorem.string(),
+    title: faker.string(),
     is_locked: false,
     is_read: false,
     is_sticky: false,
