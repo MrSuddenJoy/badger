@@ -23,7 +23,7 @@ function fake(): Microblog {
     comments_count: 0,
     url: '',
     metadata: '',
-    
+
     /**
      * @summary Do we realy need below entry? Upon creation, microblog entry is created, not deleted.......
      */
@@ -35,31 +35,23 @@ describe('microblog mutation', () => {
   test('add microblog', () => {
     const state = {data: []};
     const microblog = fake();
-
     mutations.ADD(state, microblog);
-
     expect(microblog.id! in state.data).toBeTruthy();
   });
 
   test('delete microblog', () => {
     const microblog = fake();
     const state = {data: [microblog]};
-
     mutations.DELETE(state, microblog);
-
     expect(microblog.id! in state.data).toBeFalsy();
   });
 
   test('update microblog', () => {
     const microblog = fake();
     const state = {data: [microblog]};
-
     let text;
-
     microblog.text = text = faker.lorem.words();
-
     mutations.UPDATE(state, microblog);
-
     expect(state.data[microblog.id!]['text']).toMatch(text);
   });
 
@@ -69,10 +61,8 @@ describe('microblog mutation', () => {
     const state = {
       data: []
     };
-
     mutations.ADD(state, parent);
     mutations.ADD_COMMENT(state, { parent, comment });
-
     expect(parent.id! in state.data).toBeTruthy();
     // @ts-expect-error
     expect(state.data[parent.id!].comments[comment.id]).toBeInstanceOf(Object);
@@ -85,9 +75,7 @@ describe('microblog mutation', () => {
     const state = {
       data: [parent]
     };
-
     mutations.TOGGLE_EDIT(state, parent);
-
     expect(parent.is_editing).toBeTruthy();
   });
 });
