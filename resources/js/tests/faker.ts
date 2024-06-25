@@ -1,6 +1,6 @@
 import { Post, Topic } from "../types/models";
 
-export default function post(props?: any): Post {
+export default function post(): Post {
 
   return Object.assign({
     comments: [],
